@@ -1,4 +1,17 @@
 ################
+# POTION 1.4.0 #
+################
+
+Commit date: 02/20/2018
+
+- POTION now supports Clustal Omega for multiple sequence alignment. 
+  To use it first configure POTION so it knows where to find Clustal Omega
+  (path for clustalo is located at "config_files/potion_config")
+  and set POTION to use it for multiple sequence alignment (set
+  "multiple_alignment" parameter (found in POTION's configuration file).
+
+
+################
 # POTION-1.1.2 #
 ################
 
