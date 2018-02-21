@@ -1,5 +1,5 @@
-                        README for POTION
-             (last updated 01/01/2017 - mm/dd/yyyy format)
+                       README for POTION
+             (last updated 02/20/2018 - mm/dd/yyyy format)
 
 AUTHORS
 -=-=-=-
@@ -7,6 +7,7 @@ AUTHORS
 Jorge Augusto Hongo (jorgeahongo@gmail.com)
 Giovanni Marques de Castro (giomcastro@gmail.com)
 Francisco Pereira Lobo (franciscolobo@gmail.com)
+
 
 
 1 - DESCRIPTION
@@ -221,6 +222,7 @@ potion_dir - path to the root directory of POTION.
 codeml - path to the Codeml executable of PAML package 
 consense - path to the Consense executable of Phylip package 
 dnaml - path to the Dnaml executable 
+clustalo - path to the Clustal Omega executable
 muscle - path to the MUSCLE executable 
 phipack - path to the Phi executable of PhiPack 
 prank - path to the Prank executable 
@@ -416,10 +418,11 @@ THIRD-PARTY SOFTWARE CONFIGURATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 multiple_alignment - defines program used for multiple protein sequence
-alignment. Possible values are muscle|mafft|prank. Muscle is executed with
+alignment. Possible values are muscle|mafft|prank|clustalo. Muscle is executed with
 default parameters, prank is executed with the flags -twice (to run the
-analysis twice for each group) and -F (to correctly penalize the gaps) and
-mafft is executed with the flag --auto for auto-configuration. (M)
+analysis twice for each group) and -F (to correctly penalize the gaps),
+mafft is executed with the flag --auto for auto-configuration and clustalo is
+executed with the flags --auto for auto-configuration and --force to force file overwriting. (M)
 
 bootstrap - Number of bootstraps to be generated in the phylogenetic analysis.
 Possible values are all non-negative integers. (M)

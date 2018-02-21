@@ -171,13 +171,14 @@ sub read_config_files { #read config files in the form element = value #comment
   $parameters{dnaml_path} = read_config_file_line('dnaml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phyml_path} = read_config_file_line('phyml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{muscle_path} = read_config_file_line('muscle', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{clustalo_path} = read_config_file_line('clustalo', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phipack_path} = read_config_file_line('phipack', $parameters{potion_dir}, $fh_potion_config);
   $parameters{prank_path} = read_config_file_line('prank', $parameters{potion_dir}, $fh_potion_config);
   $parameters{proml_path} = read_config_file_line('proml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{seqboot_path} = read_config_file_line('seqboot', $parameters{potion_dir}, $fh_potion_config);
   $parameters{trimal_path} = read_config_file_line('trimal', $parameters{potion_dir}, $fh_potion_config);
   $parameters{mafft_path} = read_config_file_line('mafft', $parameters{potion_dir}, $fh_potion_config);
-  $parameters{pagan_path} = read_config_file_line('pagan', $parameters{potion_dir}, $fh_potion_config);
+  #$parameters{pagan_path} = read_config_file_line('pagan', $parameters{potion_dir}, $fh_potion_config);
 
   # -=-=-= OUTPUT NAMES =-=-=-
   $parameters{result_table} = read_config_file_line('result_table', '', $fh_potion_config); 
@@ -261,6 +262,12 @@ sub check_parameters { #check for all parameters,
     if (!-x $parameters->{muscle_path}) { die ("You don't have permission to execute the MUSCLE file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
+if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignment} =~ /clustalo/i) {
+    if (!defined $parameters->{clustalo_path}) { die ("No path to Clustal Omega  was specified in potion_config at $config_path, please open this file and fill the parameter 'clustalo'.\n"); }
+    if (!-s $parameters->{clustalo_path}) { die ("The executable of Clustal Omega wasn't found in the specified path, please check if the path is correct: $parameters->{clustalo_path}\n"); }
+    if (!-x $parameters->{clustalo_path}) { die ("You don't have permission to execute the Clustal Omega file specified at potion_config, please check permissions or replace the file\n"); }
+  }
+
   if (!defined $parameters->{phipack_path}) { die ("No path to PhiPack was specified in potion_config at $config_path, please open this file and fill the parameter 'phipack'.\n"); }
   if (!-s $parameters->{phipack_path}) { die ("The executable of PhiPack wasn't found in the specified path, please check if the path is correct: $parameters->{phipack_path}\n"); }
   if (!-x $parameters->{phipack_path}) { die ("You don't have permission to execute the PhiPack file specified at potion_config, please check permissions or replace the file\n"); }
@@ -277,11 +284,11 @@ sub check_parameters { #check for all parameters,
     if (!-x $parameters->{prank_path}) { die ("You don't have permission to execute the Prank file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
-  if (defined $parameters->{multiple_alignment} && $parameters->{multiple_alignment} =~ /pagan/i) {
-    if (!defined $parameters->{pagan_path}) { die ("No path to Pagan was specified in potion_config at $config_path, please open this file and fill the parameter 'pagan'.\n"); }
-    if (!-s $parameters->{pagan_path}) { die ("The executable of Pagan wasn't found in the specified path, please check if the path is correct: $parameters->{pagan_path}\n"); }
-    if (!-x $parameters->{pagan_path}) { die ("You don't have permission to execute the Pagan file specified at potion_config, please check permissions or replace the file\n"); }
-  }
+  #if (defined $parameters->{multiple_alignment} && $parameters->{multiple_alignment} =~ /pagan/i) {
+  # if (!defined $parameters->{pagan_path}) { die ("No path to Pagan was specified in potion_config at $config_path, please open this file and fill the parameter 'pagan'.\n"); }
+  # if (!-s $parameters->{pagan_path}) { die ("The executable of Pagan wasn't found in the specified path, please check if the path is correct: $parameters->{pagan_path}\n"); }
+  # if (!-x $parameters->{pagan_path}) { die ("You don't have permission to execute the Pagan file specified at potion_config, please check permissions or replace the file\n"); }
+  #}
 
   if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /proml/i) {
     if (!defined $parameters->{proml_path}) { die ("No path to Proml was specified in potion_config at $config_path, please open this file and fill the parameter 'proml'.\n"); }
@@ -328,7 +335,7 @@ sub check_parameters { #check for all parameters,
 
   if (!defined $parameters->{phylogenetic_tree}) { die ("No program specified for phylogenetic tree construction, please set the parameter 'phylogenetic_tree' in your project configuration file.\n"); }
   
-  my @sequence_alignment_programs = ("muscle", "mafft", "prank", "pagan");
+  my @sequence_alignment_programs = ("muscle", "mafft", "prank", "clustalo");
 
   $flag = 0;
   foreach my $program (@sequence_alignment_programs) {
@@ -1199,6 +1206,15 @@ sub create_protein_alignment_files {
 #          close OUTERR;
         }
       }
+      elsif ($parameters->{multiple_alignment} =~ /clustalo/i){
+        print LOG ("$parameters->{clustalo_path} -i $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln --auto --force \n");
+        my $stderr = capture_stderr {system ("$parameters->{clustalo_path} -i $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln.2.fas --auto --force")};
+        if ($stderr) {
+          open (OUTERR, ">>$$ortholog_group.group_status");
+          print OUTERR "STOP\nError during sequence alignment using Clustal Omega\n$stderr\n";
+          close OUTERR;
+        }
+      }
       elsif ($parameters->{multiple_alignment} =~ /prank/i) {
         print LOG ("$parameters->{prank_path} -d=$$ortholog_group.cluster.aa.fa -o=$$ortholog_group.cluster.aa.fa.aln -quiet -twice -F\n");
         my $stderr = capture_stderr {system ("$parameters->{prank_path} -d=$$ortholog_group.cluster.aa.fa -o=./$$ortholog_group.cluster.aa.fa.aln -quiet -twice -F 1> /dev/null")};  # maybe 2>/dev/null as well  
@@ -1211,16 +1227,17 @@ sub create_protein_alignment_files {
           close OUTERR;
         }
       }
-      elsif ($parameters->{multiple_alignment} =~ /pagan/i) {
-        print LOG ("$parameters->{pagan_path} -s $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln\n");
-        my $stderr = capture_stderr {system ("$parameters->{pagan_path} -s $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln 1> $$ortholog_group.aln.log")};  # maybe 2>/dev/null as well  
-        move("$$ortholog_group.cluster.aa.fa.aln.fas", "$$ortholog_group.cluster.aa.fa.aln.2.fas");
-        if ($stderr) {
-          open (OUTERR,">>$$ortholog_group.group_status");
-          print OUTERR "STOP\nError during sequence alignment using $parameters->{multiple_alignment}\n$stderr\n";
-          close OUTERR;
-        }
-      }
+      #elsif ($parameters->{multiple_alignment} =~ /pagan/i) {
+        #print LOG ("$parameters->{pagan_path} -s $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln\n");
+#	print LOG ("$parameters->{pagan_path} --use-prefix-anchors -s $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln\n");
+#        my $stderr = capture_stderr {system ("$parameters->{pagan_path} --use-prefix-anchors -s $$ortholog_group.cluster.aa.fa -o $$ortholog_group.cluster.aa.fa.aln 2> $$ortholog_group.aln.log")};  # maybe 2>/dev/null as well  
+#        move("$$ortholog_group.cluster.aa.fa.aln", "$$ortholog_group.cluster.aa.fa.aln.2.fas");
+	#       if ($stderr) {
+	# open (OUTERR,">>$$ortholog_group.group_status");
+	# print OUTERR "STOP\nError during sequence alignment using $parameters->{multiple_alignment}\n$stderr\n";
+	# close OUTERR;
+	#}
+	#}
     } catch { 
       if ($tries >= $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.2.fas" && -s "$$ortholog_group.cluster.nt.fa" && -s "$$ortholog_group.cluster.aa.fa" && defined $_) {
         if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignment} =~ /muscle/i) {
@@ -1239,7 +1256,7 @@ sub create_protein_alignment_files {
   my %file_content;
   if ((! -s "$$ortholog_group.cluster.aa.fa.aln.2.fas")) {
     open (OUTERR,">>$$ortholog_group.group_status");
-    print OUTERR "STOP\nError during sequence alignment using prank\nfile not created\n";
+    print OUTERR "STOP\nError during sequence alignment using $parameters->{multiple_alignment}\nfile not created\n";
     close OUTERR;
   }
 

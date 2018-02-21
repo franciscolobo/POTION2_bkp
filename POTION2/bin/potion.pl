@@ -41,7 +41,7 @@ use Getopt::Long;
 use lib "$FindBin::Bin/.";
 require 'module_latest.pm';
 
-my $current_version = "1.3.0";
+my $current_version = "1.4.0";
 
 my $mode = "site";   # deciding what you want POTION to do. Currently POTION
                      # supports only "site" for entire site-model analysis, but

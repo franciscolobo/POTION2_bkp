@@ -1,5 +1,5 @@
                 INSTALL instructions for POTION
-          (last updated 12/02/2015 - mm/dd/yyyy format)
+          (last updated 02/20/2018 - mm/dd/yyyy format)
 
 AUTHORS
 -=-=-=-
@@ -30,12 +30,13 @@ You need to install the following third-party software to use POTION:
             (codeml executable)
 - TrimAl  - http://trimal.cgenomics.org/downloads
 - PhyML   - https://github.com/stephaneguindon/phyml/ 
+- Clustal Omega - http://www.clustal.org/omega/
 
 We recommend you to download the versions for which we tested POTION's latest 
 version, listed in
 http://www.lmb.cnptia.embrapa.br/share/POTION/user_guide.html.
 
-Note that you can choose between MUSCLE, Prank and MAFFT for protein multiple 
+Note that you can choose between MUSCLE, Prank, MAFFT and Clustal Omega for protein multiple 
 sequence alignment, and between dnaml|proml|phyml for phylogenetic tree
 reconstruction, so having only one for each of these steps is enough for your
 project.
@@ -145,6 +146,7 @@ variable. You can use '$potion_dir' to refer to the path in 'potion_dir'.
 - consense: path to the Consense executable of Phylip package
 - dnaml: path to the Dnaml executable
 - mafft: path to MAFFT executable
+- clustalo: path to Clustal Omega executable
 - muscle: path to the MUSCLE executable
 - phipack: path to the Phi executable of PhiPack package
 - prank: path to the Prank executable
