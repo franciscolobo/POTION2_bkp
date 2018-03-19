@@ -231,6 +231,7 @@ seqboot - path to the Seqboot executable of Phylip package
 trimal - path to the Trimal executable 
 mafft - path to mafft executable 
 phyml - path to phyml executable
+raxml - path to RAxML executable
 
 -------------- + names of output files + -------------------------
 
@@ -428,9 +429,9 @@ bootstrap - Number of bootstraps to be generated in the phylogenetic analysis.
 Possible values are all non-negative integers. (M)
 
 phylogenetic_tree - POTION currently supports proml|dnaml from phylip
-package and phyml. All of them calculate phylogenetic trees using the
+package, phyml and RAxML. All of them calculate phylogenetic trees using the
 maximum likelihood approach on protein or nucleotide data. Possible
-values are proml|dnaml|phyml_nt|phyml_aa. (M)
+values are proml|dnaml|phyml_nt|phyml_aa|raxml. (M)
 
 phylogenetic_tree_speed - Both proml and dnaml contain a fast execution
 mode. Use this parameter to turn it on or off. Possible values are
