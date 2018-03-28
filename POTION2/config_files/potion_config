@@ -4,7 +4,7 @@
 
 -=-=-= BASIC PARAMETER FOR LOCATION AND FILE NAME =-=-=-
 
-potion_dir = ../POTION2-master/POTION2/              # path to this program, you can reference it in the parameters below by writing "$potion_dir" when applicable (path to directories or files).
+potion_dir = /home/thieres/potion_rax/POTION2/POTION2              # path to this program, you can reference it in the parameters below by writing "$potion_dir" when applicable (path to directories or files).
 -=-=-= PATH TO EXTERNAL PROGRAMS USED BY POTION =-=-=-
 
 # type the path of the executable of each program below
@@ -22,7 +22,7 @@ mafft = /usr/bin/mafft                               # path to the Mafft executa
 pagan = usr/bin/pagan                                # path to the pagan executable
 phyml = /usr/bin/phyml                               # path to the phyml executable
 clustalo = /usr/bin/clustalo                         # path to the Clustal Omega executable
-
+raxml = /usr/bin/raxmlHPC-SSE3                       # path to the RAxML executable
 -=-=-= PARAMETERS FOR INTERNAL USE =-=-=-
 
 result_table = final_results.out                  # file with the final result in tsv format (tab spaced values).
