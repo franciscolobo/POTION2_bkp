@@ -12,19 +12,18 @@ potion_dir = /opt/POTION_dev/POTION2/POTION2    # path to this program, you can 
 
 codeml = $potion_dir/programs/palm/paml4.8/bin/codeml                         # path to the Codeml executable of PAML package
 consense = $potion_dir/programs/phylip/phylip-3.696/src/consense                     # path to the Consense executable of Phylip package
-muscle = $potion_dir/programs/muscle/muscle3.8.31_i86linux64             # path to the MUSCLE executable
+muscle = $potion_dir/programs/muscle/muscle3.8.31_i86linux64                  # path to the MUSCLE executable
 clustalo = /usr/local/bin/clustalo
-phipack = $potion_dir/programs/phipack/PhiPack/Phi                               # path to the Phi executable of PhiPack
-prank = $potion_dir/programs/prank/prank/bin/prank                             # path to the Prank executable
-proml = $potion_dir/programs/phylip/phylip-3.696/src/proml                           # path to the Proml executable of Phylip package
-dnaml = $potion_dir/programs/phylip/phylip-3.696/src/dnaml                          # path to the Proml executable of Phylip package
-seqboot = $potion_dir/programs/phylip/phylip-3.696/src/seqboot                       # path to the Seqboot executable of Phylip package
-trimal = $potion_dir/programs/trimal/trimAl/source/trimal                       # path to the Trimal executable
+phipack = $potion_dir/programs/phipack/PhiPack/Phi                            # path to the Phi executable of PhiPack
+prank = $potion_dir/programs/prank/prank/bin/prank                            # path to the Prank executable
+proml = $potion_dir/programs/phylip/phylip-3.696/src/proml                    # path to the Proml executable of Phylip package
+dnaml = $potion_dir/programs/phylip/phylip-3.696/src/dnaml                    # path to the Proml executable of Phylip package
+seqboot = $potion_dir/programs/phylip/phylip-3.696/src/seqboot                # path to the Seqboot executable of Phylip package
+trimal = $potion_dir/programs/trimal/trimAl/source/trimal                     # path to the Trimal executable
 mafft = $potion_dir/programs/prank/prank/bin/mafft
 pagan = $potion_dir/programs/pagan/pagan/bin/pagan
 phyml = $potion_dir/programs/phyml/phyml-master/src/phyml
-codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml
-
+codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml    # path to the CodonPhyML executable
 
 
 #codeml = /usr/bin/codeml                             # path to the Codeml executable of PAML package
@@ -46,7 +45,6 @@ codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml
 result_table = final_results.out                  # file with the final result in tsv format (tab spaced values).
 result_uncertain = uncertain.out                  # file with the list of clusters where the null hypotesis can't be ignored by the positive evidence. Leave empty if you do not desire to produce this list
 result_positive = positive.out                    # file with the list of clusters with evidence of positive selection.
-
 summary = summary.out
 log_file = final_log.log                          # log file name
 log_path = $potion_dir/log/                       # path where log file will be created

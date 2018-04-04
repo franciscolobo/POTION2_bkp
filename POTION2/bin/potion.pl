@@ -171,9 +171,10 @@ if ($parameters_ref->{phylogenetic_tree} =~ /proml/i) { $seq_type = 'aa'; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /dnaml/i) { $seq_type = 'nt'; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_aa/i) { $seq_type = "aa"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_nt/i) { $seq_type = "nt"; }
-elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml/i) { $seq_type = "nt"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_nt|codonphyml_co/i) { $seq_type = "nt"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_aa/i) { $seq_type = "aa"; }
 else {
-  die ("You must specify one out of four available parameters for phylogenetic tree reconstruction: proml, dnaml, phyml_aa or phyml_nt. You chose \"$parameters_ref->{phylogenetic_tree}\".\n");
+  die ("You must specify one out of four available parameters for phylogenetic tree reconstruction: proml, dnaml, phyml_aa, phyml_nt, codonphyml_aa, codonphyml_nt, codonphyml_co. You chose \"$parameters_ref->{phylogenetic_tree}\".\n");
 }
 # variables needed to control the number of processes running simultaneously
 
