@@ -170,6 +170,7 @@ sub read_config_files { #read config files in the form element = value #comment
   $parameters{consense_path} = read_config_file_line('consense', $parameters{potion_dir}, $fh_potion_config);
   $parameters{dnaml_path} = read_config_file_line('dnaml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phyml_path} = read_config_file_line('phyml', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{codonphyml_path} = read_config_file_line('codonphyml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{raxml_path} = read_config_file_line('raxml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{muscle_path} = read_config_file_line('muscle', $parameters{potion_dir}, $fh_potion_config);
   $parameters{clustalo_path} = read_config_file_line('clustalo', $parameters{potion_dir}, $fh_potion_config);
@@ -180,7 +181,13 @@ sub read_config_files { #read config files in the form element = value #comment
   $parameters{trimal_path} = read_config_file_line('trimal', $parameters{potion_dir}, $fh_potion_config);
   $parameters{mafft_path} = read_config_file_line('mafft', $parameters{potion_dir}, $fh_potion_config);
   #$parameters{pagan_path} = read_config_file_line('pagan', $parameters{potion_dir}, $fh_potion_config);
-
+  
+  # -=-=-= PATH TO BRANCH PROGRAMS =-=-=-
+  $parameters{nw_rename} = read_config_file_line('nw_rename', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{nw_labels} = read_config_file_line('nw_labels', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{nw_prune} = read_config_file_line('nw_prune', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{nw_clade} = read_config_file_line('nw_clade', $parameters{potion_dir}, $fh_potion_config);
+  
   # -=-=-= OUTPUT NAMES =-=-=-
   $parameters{result_table} = read_config_file_line('result_table', '', $fh_potion_config); 
   $parameters{result_uncertain} = read_config_file_line('result_uncertain', '', $fh_potion_config);
@@ -256,6 +263,12 @@ sub check_parameters { #check for all parameters,
     if (!-s $parameters->{dnaml_path}) { die ("The executable of Dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{dnaml_path}\n"); }
     if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the Dnaml file specified at potion_config, please check permissions or replace the file\n"); }
   }
+ 
+  if (defined $parameters->{phylogenetic_tree} && $parameters->{multiple_alignment} =~ /codonphyml/i) {
+    if (!defined $parameters->{codonphyml_path}) { die ("No path to Dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'codonphyml'.\n"); }
+    if (!-s $parameters->{codonphyml_path}) { die ("The executable of Dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{codonphyml_path}\n"); }
+    if (!-x $parameters->{codonphyml_path}) { die ("You don't have permission to execute the codonphyml file specified at potion_config, please check permissions or replace the file\n"); }
+  }
 
   if (defined $parameters->{phylogenetic_tree} && $parameters->{phylogenetic_tree} =~ /phyml/i) {
     if (!defined $parameters->{phyml_path}) { die ("No path to phyml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
@@ -309,22 +322,46 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
     if (!-x $parameters->{proml_path}) { die ("You don't have permission to execute the Proml file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
-  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /dnaml/i) {
-    if (!defined $parameters->{dnaml_path}) { die ("No path to dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
-    if (!-s $parameters->{dnaml_path}) { die ("The executable of dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{dnaml_path}\n"); }
-    if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the dnaml file specified at potion_config, please check permissions or replace the file\n"); }
-  }
+#  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /dnaml/i) {
+#    if (!defined $parameters->{dnaml_path}) { die ("No path to dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
+#    if (!-s $parameters->{dnaml_path}) { die ("The executable of dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{dnaml_path}\n"); }
+#    if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the dnaml file specified at potion_config, please check permissions or replace the file\n"); }
+#  }
 
-  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /phyml/i) {
-    if (!defined $parameters->{phyml_path}) { die ("No path to PhyML was specified in potion_config at $config_path, please open this file and fill the parameter 'phyml'.\n"); }
-    if (!-s $parameters->{phyml_path}) { die ("The executable of PhyML wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
-    if (!-x $parameters->{phyml_path}) { die ("You don't have permission to execute the PhyML file specified at potion_config, please check permissions or replace the file\n"); }
-  }
+#  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /phyml/i) {
+#    if (!defined $parameters->{phyml_path}) { die ("No path to PhyML was specified in potion_config at $config_path, please open this file and fill the parameter 'phyml'.\n"); }
+#    if (!-s $parameters->{phyml_path}) { die ("The executable of PhyML wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
+#    if (!-x $parameters->{phyml_path}) { die ("You don't have permission to execute the PhyML file specified at potion_config, please check permissions or replace the file\n"); }
+#  }
 
   if ((!defined $parameters->{user_tree_file} || -e $parameters->{user_tree_file})&&($parameters->{mode} eq "branch")) {
     if (!defined $parameters->{user_tree_file}) { die ("No path to user-defined tree file was specified in potion_config at $config_path, please open this file and fill the parameter 'proml'.\n"); }
     if (!-e $parameters->{user_tree_file}) { die ("The user-tree file wasn't found in the specified path, please check if the path is correct: $parameters->{user_tree_file}\n"); }
   }
+
+  if (!defined $parameters->{seqboot_path}) { die ("No path to Seqboot was specified in potion_config at $config_path, please open this file and fill the parameter 'seqboot'.\n"); }
+  if (!-s $parameters->{seqboot_path}) { die ("The executable of Seqboot wasn't found in the specified path, please check if the path is correct: $parameters->{seqboot_path}\n"); }
+  if (!-x $parameters->{seqboot_path}) { die ("You don't have permission to execute the Seqboot file specified at potion_config, please check permissions or replace the file\n"); }
+  
+  # NEWICK-UTILS
+  
+  if (!defined $parameters->{nw_rename}) { die ("No path to nw_rename was specified in potion_config at $config_path, please open this file and fill the parameter 'nw_rename'.\n"); }
+  if (!-s $parameters->{nw_rename}) { die ("The executable of nw_rename wasn't found in the specified path, please check if the path is correct: $parameters->{nw_rename}\n"); }
+  if (!-x $parameters->{nw_rename}) { die ("You don't have permission to execute the nw_rename file specified at potion_config, please check permissions or replace the file\n"); }
+  
+  if (!defined $parameters->{nw_labels}) { die ("No path to nw_labels was specified in potion_config at $config_path, please open this file and fill the parameter 'nw_labels'.\n"); }
+  if (!-s $parameters->{nw_labels}) { die ("The executable of nw_labels wasn't found in the specified path, please check if the path is correct: $parameters->{nw_labels}\n"); }
+  if (!-x $parameters->{nw_labels}) { die ("You don't have permission to execute the nw_labels file specified at potion_config, please check permissions or replace the file\n"); }
+  
+  if (!defined $parameters->{nw_prune}) { die ("No path to nw_prune was specified in potion_config at $config_path, please open this file and fill the parameter 'nw_prune'.\n"); }
+  if (!-s $parameters->{nw_prune}) { die ("The executable of nw_prune wasn't found in the specified path, please check if the path is correct: $parameters->{nw_prune}\n"); }
+  if (!-x $parameters->{nw_prune}) { die ("You don't have permission to execute the nw_prune file specified at potion_config, please check permissions or replace the file\n"); }
+  
+  if (!defined $parameters->{nw_clade}) { die ("No path to nw_clade was specified in potion_config at $config_path, please open this file and fill the parameter 'nw_clade'.\n"); }
+  if (!-s $parameters->{nw_clade}) { die ("The executable of nw_clade wasn't found in the specified path, please check if the path is correct: $parameters->{nw_clade}\n"); }
+  if (!-x $parameters->{nw_clade}) { die ("You don't have permission to execute the nw_clade file specified at potion_config, please check permissions or replace the file\n"); }
+  
+  
 
   if (!defined $parameters->{seqboot_path}) { die ("No path to Seqboot was specified in potion_config at $config_path, please open this file and fill the parameter 'seqboot'.\n"); }
   if (!-s $parameters->{seqboot_path}) { die ("The executable of Seqboot wasn't found in the specified path, please check if the path is correct: $parameters->{seqboot_path}\n"); }
@@ -336,7 +373,8 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
 
   # -=-=-= MODULES =-=-=-
   
-  my @phylogenetic_tree_programs = ("dnaml", "proml", "raxml_nt", "raxml_aa", "phyml_aa", "phyml_nt");
+  my @phylogenetic_tree_programs = ("dnaml", "proml","codonphyml", "raxml_nt", "raxml_aa", "phyml_aa", "phyml_nt");
+
   
   my $flag = 0;
   foreach my $program (@phylogenetic_tree_programs) {
@@ -2079,6 +2117,12 @@ sub create_tree_files {
         print LOG ("$parameters->{dnaml_path} < ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log\n");
         my $stderr = capture_stderr{system("$parameters->{dnaml_path} < ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log")};
         move('outtree', "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
+      } elsif ($parameters->{phylogenetic_tree} =~ /codonphyml/i) {
+
+        print LOG ("$parameters->{codonphyml_path} -i $$ortholog_group.cluster.aa.fa.aln.nt.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > $$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log\n");
+        my $stderr = capture_stderr{system("$parameters->{codonphyml_path} -i ./$$ortholog_group.cluster.aa.fa.aln.nt.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log")};
+        move("$$ortholog_group.cluster.aa.fa.aln.nt.phy_codonphyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
+      
       } elsif ($parameters->{phylogenetic_tree} =~ /raxml_nt/i) {
       my $rand = int(rand(10000));
       until ($rand % 2) { $rand = int(rand(1000)); }
@@ -2092,9 +2136,9 @@ sub create_tree_files {
       my $stderr = capture_stderr{system("$parameters->{raxml_path} -s $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -n $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log -m PROTCATmatrixName -p 1 -b $rand -N $parameters->{bootstrap} > /dev/null")};
       move ("RAxML_bootstrap.$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n"); #renaming output file
       } elsif ($parameters->{phylogenetic_tree} =~ /phyml/i) {
-      print LOG ("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log\n");
-      my $stderr = capture_stderr{system("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log")};
-      move("$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.boot_phyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
+        print LOG ("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log\n");
+        my $stderr = capture_stderr{system("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log")};
+        move("$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.boot_phyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
       }
     } catch {
       if (($tries >= $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree" && defined $_)||($tries >= $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.boot_phyml_tree.txt" && defined $_)) {
@@ -3492,7 +3536,10 @@ sub manage_task_allocation {
 sub store_user_phylogenetic_tree {
   my $infile = $_[0];
   my $phylo_tree_user = $infile;
+  print $phylo_tree_user;
+  my $a = <STDIN>;
   return $phylo_tree_user;
+  
 }
 
 sub create_tree_files_branch_mode {
@@ -3510,10 +3557,8 @@ sub create_tree_files_branch_mode {
 
   #changing the species names in user-defined tree for temporary gene names
   #my $stderr = capture_stderr {system ("/projects/POTION_2/programs/newick-utils-1.6/src/nw_rename /projects/POTION_2/bin/user_defined_tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
-  my $stderr = capture_stderr {system ("/projects/POTION/positive_selection_pipeline/programs/newick-utils-1.6/src/nw_rename /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
-#  print "$$ortholog_group\n\n";
-#  my $a = <STDIN>;
-  print LOG ("/projects/POTION/positive_selection_pipeline/programs/newick-utils-1.6/src/nw_rename /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree\n");
+  my $stderr = capture_stderr {system ("$parameters->{nw_rename} /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
+  print LOG ("$parameters->{nw_rename} /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree\n");
   if ($stderr) {
     open (OUTERR,">>$$ortholog_group.group_status");
     print OUTERR "STOP\nError during creation of tree file using user-defined tree as topological guide\n$stderr\n";
@@ -3537,7 +3582,7 @@ sub trim_tree_file {
   print "Trimming phylogenetic tree for $$ortholog_group\n";
   #obtaining tree labels
   
-  my $stderr = capture_stderr {system ("/projects/POTION/positive_selection_pipeline/programs/newick-utils-1.6/src/nw_labels $$ortholog_group.dummy_tree > $$ortholog_group.tree_labels")};
+  my $stderr = capture_stderr {system ("$parameters->{newick}/nw_labels $$ortholog_group.dummy_tree > $$ortholog_group.tree_labels")};
 
   #contains all names in 
   my @tmp_names;
@@ -3572,14 +3617,14 @@ sub trim_tree_file {
 
   #removing species names
   if (@removed_names) {
-    my $stderr = capture_stderr {system ("/projects/POTION/positive_selection_pipeline/programs/newick-utils-1.6/src/nw_prune $$ortholog_group.dummy_tree @removed_names > $$ortholog_group.new_dummy_tree")};
-    print LOG ("/projects/POTION_2/programs/newick-utils-1.6/src/nw_prune $$ortholog_group.dummy_tree @removed_names > $$ortholog_group.new_dummy_tree");
+    my $stderr = capture_stderr {system ("$parameters->{newick}/nw_prune $$ortholog_group.dummy_tree @removed_names > $$ortholog_group.new_dummy_tree")};
+    print LOG ("$parameters->{newick}/nw_prune $$ortholog_group.dummy_tree @removed_names > $$ortholog_group.new_dummy_tree");
     print ("/projects/POTION_2/programs/newick-utils-1.6/src/nw_prune $$ortholog_group.dummy_tree @removed_names > $$ortholog_group.new_dummy_tree");
     move("$$ortholog_group.dummy_tree", "$$ortholog_group.old_dummy_tree");
     move("$$ortholog_group.new_dummy_tree", "$$ortholog_group.dummy_tree");
   }
-  $stderr = capture_stderr {system ("/projects/POTION/positive_selection_pipeline/newick-utils-1.6/src/nw_clade $$ortholog_group.dummy_tree '#1' > $$ortholog_group.tmp_foreground_branch")};
-  $stderr = capture_stderr {system ("/projects/POTION/positive_selection_pipeline/newick-utils-1.6/src/nw_labels $$ortholog_group.tmp_foreground_branch > $$ortholog_group.foreground_branch")};
+  $stderr = capture_stderr {system ("$parameters->{newick}/nw_clade $$ortholog_group.dummy_tree '#1' > $$ortholog_group.tmp_foreground_branch")};
+  $stderr = capture_stderr {system ("$parameters->{newick}/nw_labels $$ortholog_group.tmp_foreground_branch > $$ortholog_group.foreground_branch")};
   
   my @foreground_names;
 
@@ -3621,8 +3666,8 @@ sub trim_tree_file {
   #comparing foreground and backgruond countings with cutoffs
   my $for_count = scalar(@foreground_names);
   my $back_count = scalar(@background_names);
-#  print "$for_count\t$back_count\n";
-#  my $a = <STDIN>;
+#   print "$for_count\t$back_count\n";
+#   my $a = <STDIN>;
   if (($for_count < $parameters->{minimum_taxa_foreground})||($for_count > $parameters->{maximum_taxa_foreground})) {
     print ("Group $$ortholog_group removed: the number of foreground taxa ($for_count) is outside user-defined cutoffs ($parameters->{minimum_taxa_foreground} - $parameters->{maximum_taxa_foreground})\n");
     if (defined $clusters->{$$ortholog_group}) {

@@ -171,6 +171,7 @@ if ($parameters_ref->{phylogenetic_tree} =~ /proml/i) { $seq_type = 'aa'; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /dnaml/i) { $seq_type = 'nt'; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_aa/i) { $seq_type = "aa"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_nt/i) { $seq_type = "nt"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml/i) { $seq_type = "nt"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_nt/i) { $seq_type = "nt"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_aa/i) { $seq_type = "aa"; } 
 else {
