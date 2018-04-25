@@ -171,6 +171,7 @@ sub read_config_files { #read config files in the form element = value #comment
   $parameters{dnaml_path} = read_config_file_line('dnaml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phyml_path} = read_config_file_line('phyml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{codonphyml_path} = read_config_file_line('codonphyml', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{raxml_path} = read_config_file_line('raxml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{muscle_path} = read_config_file_line('muscle', $parameters{potion_dir}, $fh_potion_config);
   $parameters{clustalo_path} = read_config_file_line('clustalo', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phipack_path} = read_config_file_line('phipack', $parameters{potion_dir}, $fh_potion_config);
@@ -197,6 +198,12 @@ sub read_config_files { #read config files in the form element = value #comment
   # -=-=-= EXTERNAL ERROR HANDLING =-=-=-
   $parameters{tries} = read_config_file_line('tries', '', $fh_potion_config);
   close($fh_potion_config);
+
+  if (($parameters{phylogenetic_tree} =~ /raxml/)&&($parameters{min_gene_number_per_cluster} < 4)) {
+    $parameters{min_gene_number_per_cluster} = 4;
+#    print LOG ("POTION is setting min_gene_number_per_cluster to 4 because you choose phylogenetic_tree as $parameters{phylogenetic_tree}\n");
+    print ("POTION is setting min_gene_number_per_cluster to 4 because you choose phylogenetic_tree as $parameters{phylogenetic_tree}\n");
+  }
   return \%parameters;
 }
 
@@ -267,6 +274,12 @@ sub check_parameters { #check for all parameters,
     if (!defined $parameters->{phyml_path}) { die ("No path to phyml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
     if (!-s $parameters->{phyml_path}) { die ("The executable of phyml wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
     if (!-x $parameters->{phyml_path}) { die ("You don't have permission to execute the Dnaml file specified at potion_config, please check permissions or replace the file\n"); }
+  }
+
+  if (defined $parameters->{phylogenetic_tree} && $parameters->{phylogenetic_tree} =~ /raxml_nt|raxml_aa/i ) {
+    if (!defined $parameters->{raxml_path}) { die ("No path to raxml was specified in potion_config at $config_path, please open this file and fill the parameter 'raxml'.\n"); }
+    if (!-s $parameters->{raxml_path}) { die ("The executable of raxml wasn't found in the specified path, please check if the path is correct: $parameters->{raxml_path}\n");}
+    if (!-x $parameters->{raxml_path}) { die ("You don't have permission to execute the raxml file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
   if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignment} =~ /muscle/i) {
@@ -360,7 +373,8 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
 
   # -=-=-= MODULES =-=-=-
   
-  my @phylogenetic_tree_programs = ("dnaml", "proml","codonphyml", "phyml_aa", "phyml_nt");
+  my @phylogenetic_tree_programs = ("dnaml", "proml","codonphyml", "raxml_nt", "raxml_aa", "phyml_aa", "phyml_nt");
+
   
   my $flag = 0;
   foreach my $program (@phylogenetic_tree_programs) {
@@ -2109,6 +2123,18 @@ sub create_tree_files {
         my $stderr = capture_stderr{system("$parameters->{codonphyml_path} -i ./$$ortholog_group.cluster.aa.fa.aln.nt.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log")};
         move("$$ortholog_group.cluster.aa.fa.aln.nt.phy_codonphyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
       
+      } elsif ($parameters->{phylogenetic_tree} =~ /raxml_nt/i) {
+      my $rand = int(rand(10000));
+      until ($rand % 2) { $rand = int(rand(1000)); }
+      print LOG ("$parameters->{raxml_path} -s $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -n $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log -m GTRGAMMA -p 1 -b $rand -N $parameters->{bootstrap}\n");
+      my $stderr = capture_stderr{system("$parameters->{raxml_path} -s $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -n $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log -m GTRGAMMA -p 1 -b $rand -N $parameters->{bootstrap} > /dev/null")};
+      move ("RAxML_bootstrap.$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n"); #renaming output file
+      } elsif ($parameters->{phylogenetic_tree} =~ /raxml_aa/i) {
+      my $rand = int(rand(10000));
+      until ($rand % 2) { $rand = int(rand(1000)); }
+      print LOG ("$parameters->{raxml_path} -s $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -n $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log -m PROTCATmatrixName -p 1 -b $rand -N $$parameters->{bootstrap} &> /dev/null \n");
+      my $stderr = capture_stderr{system("$parameters->{raxml_path} -s $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -n $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log -m PROTCATmatrixName -p 1 -b $rand -N $parameters->{bootstrap} > /dev/null")};
+      move ("RAxML_bootstrap.$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n"); #renaming output file
       } elsif ($parameters->{phylogenetic_tree} =~ /phyml/i) {
         print LOG ("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log\n");
         my $stderr = capture_stderr{system("$parameters->{phyml_path} < ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log")};
