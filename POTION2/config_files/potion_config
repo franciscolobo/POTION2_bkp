@@ -25,6 +25,10 @@ pagan = $potion_dir/programs/pagan/pagan/bin/pagan
 phyml = $potion_dir/programs/phyml/phyml-master/src/phyml
 codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml
 
+nw_rename = $potion_dir/programs/newick-utils-1.6/src/nw_rename # path to nw_rename in newick-utils
+nw_labels = $potion_dir/programs/newick-utils-1.6/src/nw_labels # path to nw_labels in newick-utils
+nw_prune = $potion_dir/programs/newick-utils-1.6/src/nw_prune # path to nw_prune in newick-utils
+nw_clade = $potion_dir/programs/newick-utils-1.6/src/nw_clade # path to nw_clade in newick-utils
 
 
 #codeml = /usr/bin/codeml                             # path to the Codeml executable of PAML package
