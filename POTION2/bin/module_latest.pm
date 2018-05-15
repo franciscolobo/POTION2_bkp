@@ -226,6 +226,32 @@ sub read_config_file_line { # file format element = value
   return;
 }
 
+# function to set codon table name
+
+sub codon_table_name{
+# my ($parameters, $key)
+ my $tb = $_[0];
+ my %table_name = (
+    '1' => 'STANDARD',
+    '2' => 'TVMC',
+    '3' => 'TYMC',
+    '4' => 'THMPCMCMSC',
+    '5' => 'THIMC',
+    '6' => 'THCDHNC',
+    '9' => 'THEFMC',
+    '10'=> 'THENC',
+    '11' => 'THBAPPC',
+    '12' => 'THAYNC',
+    '14' => 'THAFMC',
+    '16' => 'CHMC',
+    '21' => 'TRMC',
+    '22' => 'SCOMC',
+    '23' => 'THMC'    
+);
+    if ($table_name{$tb}){
+        return ($table_name{$tb})
+    }else{ die("The value $tb for codon table is'n valid.")};
+}
 
 # function to identify errors in the configuration files and direct the user to the needed adjustments
 sub check_parameters { #check for all parameters, 
@@ -233,8 +259,7 @@ sub check_parameters { #check for all parameters,
 
   my $config_path = getcwd();
   $config_path =~ s/\/\w+$/\/config_files/;
-
-
+  
   # -=-=-= BASIC PARAMETER FOR LOCATION AND FILE NAME =-=-=-
   if (!defined $parameters->{potion_dir}) { die ("No path to Potion was specified in potion_config at $config_path, please open this file and fill the parameter 'potion_dir'.\n"); }
   if (!-d $parameters->{potion_dir}) { die ("The path to Potion isn't a valid directory, please check if the path in 'potion_dir' is correct: $parameters->{potion_dir}\n"); }
@@ -264,12 +289,12 @@ sub check_parameters { #check for all parameters,
     if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the Dnaml file specified at potion_config, please check permissions or replace the file\n"); }
   }
  
-  if (defined $parameters->{phylogenetic_tree} && $parameters->{multiple_alignment} =~ /codonphyml/i) {
-    if (!defined $parameters->{codonphyml_path}) { die ("No path to Dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'codonphyml'.\n"); }
-    if (!-s $parameters->{codonphyml_path}) { die ("The executable of Dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{codonphyml_path}\n"); }
-    if (!-x $parameters->{codonphyml_path}) { die ("You don't have permission to execute the codonphyml file specified at potion_config, please check permissions or replace the file\n"); }
+  if (defined $parameters->{phylogenetic_tree} && $parameters->{phylogenetic_tree} =~ /codonphyml/i) {
+    if (!defined $parameters->{codonphyml_path}) { die ("No path to CodonphyML was specified in potion_config at $config_path, please open this file and fill the parameter 'codonphyml'.\n"); }
+    if (!-s $parameters->{codonphyml_path}) { die ("The executable of CodonphyML wasn't found in the specified path, please check if the path is correct: $parameters->{codonphyml_path}\n"); }
+    if (!-x $parameters->{codonphyml_path}) { die ("You don't have permission to execute the CodonphyML file specified at potion_config, please check permissions or replace the file\n"); }
   }
-
+  
   if (defined $parameters->{phylogenetic_tree} && $parameters->{phylogenetic_tree} =~ /phyml/i) {
     if (!defined $parameters->{phyml_path}) { die ("No path to phyml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
     if (!-s $parameters->{phyml_path}) { die ("The executable of phyml wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
@@ -310,11 +335,11 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
     if (!-x $parameters->{prank_path}) { die ("You don't have permission to execute the Prank file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
-  #if (defined $parameters->{multiple_alignment} && $parameters->{multiple_alignment} =~ /pagan/i) {
-  # if (!defined $parameters->{pagan_path}) { die ("No path to Pagan was specified in potion_config at $config_path, please open this file and fill the parameter 'pagan'.\n"); }
-  # if (!-s $parameters->{pagan_path}) { die ("The executable of Pagan wasn't found in the specified path, please check if the path is correct: $parameters->{pagan_path}\n"); }
-  # if (!-x $parameters->{pagan_path}) { die ("You don't have permission to execute the Pagan file specified at potion_config, please check permissions or replace the file\n"); }
-  #}
+  if (defined $parameters->{multiple_alignment} && $parameters->{multiple_alignment} =~ /pagan/i) {
+  if (!defined $parameters->{pagan_path}) { die ("No path to Pagan was specified in potion_config at $config_path, please open this file and fill the parameter 'pagan'.\n"); }
+  if (!-s $parameters->{pagan_path}) { die ("The executable of Pagan wasn't found in the specified path, please check if the path is correct: $parameters->{pagan_path}\n"); }
+  if (!-x $parameters->{pagan_path}) { die ("You don't have permission to execute the Pagan file specified at potion_config, please check permissions or replace the file\n"); }
+  }
 
   if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /proml/i) {
     if (!defined $parameters->{proml_path}) { die ("No path to Proml was specified in potion_config at $config_path, please open this file and fill the parameter 'proml'.\n"); }
@@ -322,17 +347,17 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
     if (!-x $parameters->{proml_path}) { die ("You don't have permission to execute the Proml file specified at potion_config, please check permissions or replace the file\n"); }
   }
 
-#  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /dnaml/i) {
-#    if (!defined $parameters->{dnaml_path}) { die ("No path to dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
-#    if (!-s $parameters->{dnaml_path}) { die ("The executable of dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{dnaml_path}\n"); }
-#    if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the dnaml file specified at potion_config, please check permissions or replace the file\n"); }
-#  }
+ if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /dnaml/i) {
+   if (!defined $parameters->{dnaml_path}) { die ("No path to dnaml was specified in potion_config at $config_path, please open this file and fill the parameter 'dnaml'.\n"); }
+   if (!-s $parameters->{dnaml_path}) { die ("The executable of dnaml wasn't found in the specified path, please check if the path is correct: $parameters->{dnaml_path}\n"); }
+   if (!-x $parameters->{dnaml_path}) { die ("You don't have permission to execute the dnaml file specified at potion_config, please check permissions or replace the file\n"); }
+ }
 
-#  if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /phyml/i) {
-#    if (!defined $parameters->{phyml_path}) { die ("No path to PhyML was specified in potion_config at $config_path, please open this file and fill the parameter 'phyml'.\n"); }
-#    if (!-s $parameters->{phyml_path}) { die ("The executable of PhyML wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
-#    if (!-x $parameters->{phyml_path}) { die ("You don't have permission to execute the PhyML file specified at potion_config, please check permissions or replace the file\n"); }
-#  }
+ if (!defined $parameters->{phylogenetic_tree} || $parameters->{multiple_alignment} =~ /phyml/i) {
+   if (!defined $parameters->{phyml_path}) { die ("No path to PhyML was specified in potion_config at $config_path, please open this file and fill the parameter 'phyml'.\n"); }
+   if (!-s $parameters->{phyml_path}) { die ("The executable of PhyML wasn't found in the specified path, please check if the path is correct: $parameters->{phyml_path}\n"); }
+   if (!-x $parameters->{phyml_path}) { die ("You don't have permission to execute the PhyML file specified at potion_config, please check permissions or replace the file\n"); }
+ }
 
   if ((!defined $parameters->{user_tree_file} || -e $parameters->{user_tree_file})&&($parameters->{mode} eq "branch")) {
     if (!defined $parameters->{user_tree_file}) { die ("No path to user-defined tree file was specified in potion_config at $config_path, please open this file and fill the parameter 'proml'.\n"); }
@@ -373,9 +398,7 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
 
   # -=-=-= MODULES =-=-=-
   
-  my @phylogenetic_tree_programs = ("dnaml", "proml","codonphyml", "raxml_nt", "raxml_aa", "phyml_aa", "phyml_nt");
-
-  
+  my @phylogenetic_tree_programs = ("dnaml", "proml", "codonphyml_aa,", "codonphyml_nt", "codonphyml_co", "phyml_aa", "phyml_nt", "raxml_nt", "raxml_aa");  
   my $flag = 0;
   foreach my $program (@phylogenetic_tree_programs) {
     if ($program =~ /$parameters->{phylogenetic_tree}/) {$flag = 1;}
@@ -459,11 +482,12 @@ if (!defined $parameters->{multiple_alignment} || $parameters->{multiple_alignme
     $parameters->{sequence_identity_comparison} = "nt";
     print "sequence_identity_comparison setted to nt, since it was not defined by user\n";
   }
+  return;
 }
 
 # This function checks whether the nucleotide sequence:
 # 1- has any of the specified start codons
-# 2- has either of the specified stop codons
+# 2- has either of the specified stop codons table
 # 3- has a sequence that is multiple of 3
 # 4- has non-standard nucleotides
 # If the method find any inconsistency, it is added in $validation variable according to the pattern above and reported in the LOG
@@ -2095,15 +2119,16 @@ sub boot_file_configuration {
   return;
 }
 
-
 sub create_tree_files {
   my ($parameters, $seq_type, $ortholog_group) = @_;
-
+#   print "Tabela: $parameters->{table_desc}\n";
+# 	$a = <STDIN>;
   if (-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") {
     print LOG ("File $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree already exists, skipping the creation of phylogenetic tree file for group $$ortholog_group.\n");
     return;
   }
   tree_file_configuration($parameters, $seq_type, $ortholog_group);
+      
   print ("Constructing ML tree of $$ortholog_group\n") if $parameters->{verbose};
   my $tries = 0;
   while ($tries < $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") {
@@ -2117,12 +2142,17 @@ sub create_tree_files {
         print LOG ("$parameters->{dnaml_path} < ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log\n");
         my $stderr = capture_stderr{system("$parameters->{dnaml_path} < ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.conf.tree > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log")};
         move('outtree', "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
-      } elsif ($parameters->{phylogenetic_tree} =~ /codonphyml/i) {
-
-        print LOG ("$parameters->{codonphyml_path} -i $$ortholog_group.cluster.aa.fa.aln.nt.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > $$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log\n");
-        my $stderr = capture_stderr{system("$parameters->{codonphyml_path} -i ./$$ortholog_group.cluster.aa.fa.aln.nt.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree.log")};
-        move("$$ortholog_group.cluster.aa.fa.aln.nt.phy_codonphyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
-      
+      } elsif ($parameters->{phylogenetic_tree} =~ /codonphyml_aa|codonphyml_nt/i) {
+        print LOG ("$parameters->{codonphyml_path} -i $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log\n");
+        my $stderr = capture_stderr{system("$parameters->{codonphyml_path} -i ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -b $parameters->{bootstrap} -d $$seq_type -f optimize > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log")};
+        move("$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy_codonphyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
+      } elsif ($parameters->{phylogenetic_tree} =~ /codonphyml_co/i) {
+        
+        my $table_nm = codon_table_name($parameters->{codon_table});
+        
+        print LOG ("$parameters->{codonphyml_path} -i $$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -b $parameters->{bootstrap} -d $$seq_type -g $table_nm -f optimize ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log");
+        my $stderr = capture_stderr{system("$parameters->{codonphyml_path} -i ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy -b $parameters->{bootstrap} -d $$seq_type -g $table_nm -f optimize > ./$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.tree.log")};
+        move("$$ortholog_group.cluster.aa.fa.aln.nt.phy_codonphyml_tree.txt", "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.tree") || die ("Problem at $$ortholog_group (phylogenetic tree files): couldn't produce or manipulate the phylogenetic tree file.\n");  # renaming output file
       } elsif ($parameters->{phylogenetic_tree} =~ /raxml_nt/i) {
       my $rand = int(rand(10000));
       until ($rand % 2) { $rand = int(rand(1000)); }
@@ -2355,7 +2385,7 @@ sub create_paml_config_files {
 # All it needs is a letter 'I' in the end of the first line of the phylip file
 sub set_as_interleaved {
   my $nt_phy_file_name = shift;
-  print "$nt_phy_file_name\n";
+#  print "$nt_phy_file_name\n";
 #  my $a = <STDIN>;
   tie my @file, 'Tie::File', $nt_phy_file_name;
   if ($file[0] =~ /I/) { return; }

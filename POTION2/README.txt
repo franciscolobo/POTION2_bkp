@@ -231,6 +231,7 @@ seqboot - path to the Seqboot executable of Phylip package
 trimal - path to the Trimal executable 
 mafft - path to mafft executable 
 phyml - path to phyml executable
+codonphyml - path to codonphyml executable
 raxml - path to RAxML executable
 
 -------------- + names of output files + -------------------------
@@ -350,6 +351,26 @@ translation and validation purposes, possible tables are defined in NCBI and
 bioperl. See http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi for the
 definition and taxonomic range of the 22 official genetic codes. (M)
 
+# If you choose codonphyml_co only these options are valid:
+ This option sets the genetic code to use.
+ models will require the standard genetic code.
+  code = 1 -  STANDARD : The standard genetic code is used.
+  code = 2 -  TVMC : Vertebrate Mitochondrial.
+  code = 3 -  TYMC : Yeast Mitochondrial.
+  code = 4 -  THMPCMCMSC : Mold, Protozoan, and Coelenterate Mit. Code and Myco/Spiroplasma.
+  code = 5 -  THIMC : Invertebrate Mitochondrial.
+  code = 6 -  THCDHNC : Ciliate, Dasycladacean and Hexamita Nuclear.
+  code = 9 -  THEFMC : Echinoderm and Flatworm Mitochondrial.
+  code = 10 - THENC : Euplotid Nuclear.
+  code = 11 - THBAPPC : Bacterial, Archaeal and Plant Plastid.
+  code = 12 - THAYNC : Alternative Yeast Nuclear.
+  code = 13 - THAMC : Ascidian Mitochondrial.
+  code = 14 - THAFMC : Alternative Flatworm Mitochondrial.
+  code = 16 - CHMC : Chlorophycean Mitochondrial.
+  code = 21 - TRMC : Trematode Mitochondrial.
+  code = 22 - SCOMC : Scenedesmus obliquus mitochondrial.
+  code = 23 - THMC : Thraustochytrium Mitochondrial.
+
 absolute_min_sequence_size - minimum absolute sequence length cutoff.
 Sequences whose lengths are smaller than this value are removed from
 further analyses. Possible values are all non-negative integers (ex: 200).
@@ -431,7 +452,7 @@ Possible values are all non-negative integers. (M)
 phylogenetic_tree - POTION currently supports proml|dnaml from phylip
 package, phyml and RAxML. All of them calculate phylogenetic trees using the
 maximum likelihood approach on protein or nucleotide data. Possible
-values are proml|dnaml|phyml_nt|phyml_aa|raxml. (M)
+values are proml|dnaml|phyml_nt|phyml_aa|codonphyml_aa|codonphyml_nt|codonphyml_co. (M)
 
 phylogenetic_tree_speed - Both proml and dnaml contain a fast execution
 mode. Use this parameter to turn it on or off. Possible values are
