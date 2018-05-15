@@ -31,6 +31,7 @@ You need to install the following third-party software to use POTION:
 - TrimAl  - http://trimal.cgenomics.org/downloads
 - PhyML   - https://github.com/stephaneguindon/phyml/ 
 - Clustal Omega - http://www.clustal.org/omega/
+- RAxML   - https://github.com/stamatak/standard-RAxML
 
 We recommend you to download the versions for which we tested POTION's latest 
 version, listed in
@@ -154,3 +155,4 @@ variable. You can use '$potion_dir' to refer to the path in 'potion_dir'.
 - seqboot: path to the Seqboot executable of Phylip package
 - trimal: path to the Trimal executable
 - phyml: path to the PhyML executable
+- raxml: paht to the RAxML executable

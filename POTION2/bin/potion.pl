@@ -173,8 +173,11 @@ elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_aa/i) { $seq_type = "aa"; 
 elsif ($parameters_ref->{phylogenetic_tree} =~ /phyml_nt/i) { $seq_type = "nt"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_nt|codonphyml_co/i) { $seq_type = "nt"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_aa/i) { $seq_type = "aa"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml/i) { $seq_type = "nt"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_nt/i) { $seq_type = "nt"; }
+elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_aa/i) { $seq_type = "aa"; } 
 else {
-  die ("You must specify one out of four available parameters for phylogenetic tree reconstruction: proml, dnaml, phyml_aa, phyml_nt, codonphyml_aa, codonphyml_nt, codonphyml_co. You chose \"$parameters_ref->{phylogenetic_tree}\".\n");
+  die ("You must specify one out of five available parameters for phylogenetic tree reconstruction: proml, raxml_nt, raxml_aa, dnaml, phyml_aa or phyml_nt. You chose \"$parameters_ref->{phylogenetic_tree}\".\n");
 }
 # variables needed to control the number of processes running simultaneously
 
@@ -254,7 +257,9 @@ while (@id_rec_to_process > 0 || @f_tree_to_process > 0 || @model8_to_process > 
 
       my $task_time = time();
       if ($parameters_ref->{mode} eq "site") { 
-        create_bootstrap_files ($parameters_ref, \$seq_type, \$ortholog_group);
+        if ($parameters_ref->{phylogenetic_tree} !~ m/codonphyml|raxml/i ){
+          create_bootstrap_files ($parameters_ref, \$seq_type, \$ortholog_group);
+	  }
         create_tree_files ($parameters_ref, \$seq_type, \$ortholog_group);
         create_consensus_tree_files ($parameters_ref, \$seq_type, \$ortholog_group);
         set_as_interleaved("$ortholog_group.cluster.aa.fa.aln.nt.phy.trim"); # necessary for PAML to interpret the nucleotide alignment file, just adds a 'I' to the header

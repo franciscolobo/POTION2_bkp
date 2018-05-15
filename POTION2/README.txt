@@ -232,6 +232,7 @@ trimal - path to the Trimal executable
 mafft - path to mafft executable 
 phyml - path to phyml executable
 codonphyml - path to codonphyml executable
+raxml - path to RAxML executable
 
 -------------- + names of output files + -------------------------
 
@@ -449,7 +450,7 @@ bootstrap - Number of bootstraps to be generated in the phylogenetic analysis.
 Possible values are all non-negative integers. (M)
 
 phylogenetic_tree - POTION currently supports proml|dnaml from phylip
-package and phyml. All of them calculate phylogenetic trees using the
+package, phyml and RAxML. All of them calculate phylogenetic trees using the
 maximum likelihood approach on protein or nucleotide data. Possible
 values are proml|dnaml|phyml_nt|phyml_aa|codonphyml_aa|codonphyml_nt|codonphyml_co. (M)
 
