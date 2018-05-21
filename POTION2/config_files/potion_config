@@ -11,38 +11,25 @@ potion_dir = /opt/POTION_dev/POTION2/POTION2    # path to this program, you can 
 
 
 codeml = $potion_dir/programs/palm/paml4.8/bin/codeml                         # path to the Codeml executable of PAML package
-consense = $potion_dir/programs/phylip/phylip-3.696/src/consense                     # path to the Consense executable of Phylip package
+consense = $potion_dir/programs/phylip/phylip-3.696/src/consense              # path to the Consense executable of Phylip package
 muscle = $potion_dir/programs/muscle/muscle3.8.31_i86linux64                  # path to the MUSCLE executable
-clustalo = /usr/local/bin/clustalo
+clustalo = $potion_dir/programs/clustalo/bin/clustalo                         # path to the Clustal Omega executable
 phipack = $potion_dir/programs/phipack/PhiPack/Phi                            # path to the Phi executable of PhiPack
 prank = $potion_dir/programs/prank/prank/bin/prank                            # path to the Prank executable
 proml = $potion_dir/programs/phylip/phylip-3.696/src/proml                    # path to the Proml executable of Phylip package
 dnaml = $potion_dir/programs/phylip/phylip-3.696/src/dnaml                    # path to the Proml executable of Phylip package
 seqboot = $potion_dir/programs/phylip/phylip-3.696/src/seqboot                # path to the Seqboot executable of Phylip package
 trimal = $potion_dir/programs/trimal/trimAl/source/trimal                     # path to the Trimal executable
-mafft = $potion_dir/programs/prank/prank/bin/mafft
-pagan = $potion_dir/programs/pagan/pagan/bin/pagan
-phyml = $potion_dir/programs/phyml/phyml-master/src/phyml
-codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml
-nw_rename = $potion_dir/programs/newick-utils-1.6/src/nw_rename # path to nw_rename in newick-utils
-nw_labels = $potion_dir/programs/newick-utils-1.6/src/nw_labels # path to nw_labels in newick-utils
-nw_prune = $potion_dir/programs/newick-utils-1.6/src/nw_prune # path to nw_prune in newick-utils
-nw_clade = $potion_dir/programs/newick-utils-1.6/src/nw_clade # path to nw_clade in newick-utils
+mafft = $potion_dir/programs/prank/prank/bin/mafft                            # path to the Mafft executable
+pagan = $potion_dir/programs/pagan/pagan/bin/pagan                            # path to the Pagan executable
+phyml = $potion_dir/programs/phyml/phyml-master/src/phyml                     # path to the PhyML executable
+codonphyml = $potion_dir/programs/codonphyml/codonPHYML_dev/src/codonphyml    # path to the CodonPhyML executable
+nw_rename = $potion_dir/programs/newick-utils-1.6/src/nw_rename               # path to nw_rename in newick-utils
+nw_labels = $potion_dir/programs/newick-utils-1.6/src/nw_labels               # path to nw_labels in newick-utils
+nw_prune = $potion_dir/programs/newick-utils-1.6/src/nw_prune                 # path to nw_prune in newick-utils
+nw_clade = $potion_dir/programs/newick-utils-1.6/src/nw_clade                 # path to nw_clade in newick-utils
 
 
-#codeml = /usr/bin/codeml                             # path to the Codeml executable of PAML package
-#consense = /usr/bin/consense                         # path to the Consense executable of Phylip package
-#muscle = /usr/bin/muscle                             # path to the MUSCLE executable
-#phipack = /usr/bin/Phi                               # path to the Phi executable of PhiPack
-#prank = /usr/bin/prank                               # path to the Prank executable
-#proml = /usr/bin/proml                               # path to the Proml executable of Phylip package
-#dnaml = /usr/bin/dnaml                               # path to the dnaml executable of Phylip package
-#seqboot = /usr/bin/seqboot                           # path to the Seqboot executable of Phylip package
-#trimal = /usr/bin/trimal                             # path to the Trimal executable
-#mafft = /usr/bin/mafft                               # path to the Mafft executable
-#pagan = usr/bin/pagan                                # path to the pagan executable
-#phyml = /usr/bin/phyml                               # path to the phyml executable
-#clustalo = /usr/bin/clustalo                         # path to the Clustal Omega executable
 
 -=-=-= PARAMETERS FOR INTERNAL USE =-=-=-
 

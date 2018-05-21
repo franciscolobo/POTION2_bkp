@@ -320,7 +320,7 @@ validation_criteria, absolute_min_sequence_size, absolute_max_sequence_size,
 relative_min_sequence_size, relative_max_sequence_size,
 identity_most_similar_sequence, mean_sequence_identity. (M)
 
-behavior_about_paralogs - Defines how POTION should handle mixed groups
+homology_filter - Defines how POTION should handle mixed groups
 of homologous genes that contain orthologs and/or paralogs. Possible
 values are:
   "0" analyze all sequences within group.
