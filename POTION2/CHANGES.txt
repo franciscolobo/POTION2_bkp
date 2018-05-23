@@ -1,3 +1,15 @@
+################
+# POTION 1.4.2 #
+################
+
+Commit date: 04/04/2018
+
+- POTION now supports CodonPhyML for multiple sequence alignment.
+  To use it first configure POTION so it knows where to find CodonPhyML
+  (path for codonphyml is located at "config_files/potion_config")
+  and set POTION to use it for multiple sequence alignment (set
+  "multiple_alignment" parameter (found in POTION's configuration file).
+
 ################d
 # POTION 1.4.1 #
 ################
@@ -12,19 +24,6 @@ Commit date 03/15/2018
   to either raxml_nt or raxml_aa to use nucleotide or amino acid sequences,
   respectivelly.
   *RAxML needs at least four sequences per cluster.
-
-################
-# POTION 1.4.2 #
-################
-
-Commit date: 04/04/2018
-  
-- POTION now supports CodonPhyML for multiple sequence alignment.
-  To use it first configure POTION so it knows where to find CodonPhyML
-  (path for codonphyml is located at "config_files/potion_config")
-  and set POTION to use it for multiple sequence alignment (set
-  "multiple_alignment" parameter (found in POTION's configuration file).
-  
 
 ################
 # POTION 1.4.0 #

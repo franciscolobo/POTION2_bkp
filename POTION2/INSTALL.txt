@@ -32,13 +32,14 @@ You need to install the following third-party software to use POTION:
 - PhyML   - https://github.com/stephaneguindon/phyml/ 
 - Clustal Omega - http://www.clustal.org/omega/
 - RAxML   - https://github.com/stamatak/standard-RAxML
+- CodonPhyML - https://sourceforge.net/projects/codonphyml/files/latest/download
 
 We recommend you to download the versions for which we tested POTION's latest 
 version, listed in
 http://www.lmb.cnptia.embrapa.br/share/POTION/user_guide.html.
 
 Note that you can choose between MUSCLE, Prank, MAFFT and Clustal Omega for protein multiple 
-sequence alignment, and between dnaml|proml|phyml for phylogenetic tree
+sequence alignment, and between dnaml|proml|phyml|raxml|codonphyml for phylogenetic tree
 reconstruction, so having only one for each of these steps is enough for your
 project.
 
@@ -155,4 +156,5 @@ variable. You can use '$potion_dir' to refer to the path in 'potion_dir'.
 - seqboot: path to the Seqboot executable of Phylip package
 - trimal: path to the Trimal executable
 - phyml: path to the PhyML executable
-- raxml: paht to the RAxML executable
+- raxml: path to the RAxML executable
+- codonphyml: path to the CodonPhyML executable
