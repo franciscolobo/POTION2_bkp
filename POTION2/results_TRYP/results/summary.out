@@ -1,8 +1,0 @@
-Number of valid clusters: 40
-Time spent: 0:36:01 (2161 seconds)
-Total time (sequential run): 2:22:59 (8579 seconds)
- - total time on building phylogenetic trees: 0:10:15 (615 seconds)
- - total time on model 1: 0:05:13 (313 seconds)
- - total time on model 2: 0:14:54 (894 seconds)
- - total time on model 7: 0:38:31 (2311 seconds)
- - total time on model 8: 1:14:06 (4446 seconds)

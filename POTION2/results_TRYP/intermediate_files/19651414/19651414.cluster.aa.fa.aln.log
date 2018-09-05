@@ -1,3 +1,0 @@
-Started Thu Jun 14 20:00:31 2018
-/opt/POTION_dev/POTION2/POTION2/programs/muscle/muscle3.8.31_i86linux64 -in ./19651414.cluster.aa.fa -out ./19651414.cluster.aa.fa.aln.2.fas -log ./19651414.cluster.aa.fa.aln.log -quiet 
-Finished Thu Jun 14 20:00:31 2018
