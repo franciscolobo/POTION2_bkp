@@ -2400,6 +2400,29 @@ sub set_as_interleaved {
 }
 
 
+sub run_fastcodeml {
+  my ($parameters, $ortholog_group, $model) = @_;
+  my $rand = int(rand(100000000));
+
+  print ("Calculating linkelihood of model $$model for group $$ortholog_group\n");
+  print LOG ("$parameters->{fastcodeml_path} -hy $$model -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.final_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model.log");
+  my $tries = 0;
+  while($tries < $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model"){
+    $tries++;
+    try{
+      my $stderr = capture_stderr{ system ("$parameters->{fastcodeml_path} -hy $$model -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.final_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model.log")};
+        move ("$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model.i", "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model");
+
+      }catch{
+        if($tries >= $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model" && defined $_) {
+          print LOG_ERR ("Couldn't analyze the likelihood of model $$model for group $$ortholog_group.\nError: $_\n\n");
+          die();
+        }
+      };
+  }
+  return;
+}
+
 sub run_paml {
   my ($parameters, $ortholog_group, $model) = @_;
 
