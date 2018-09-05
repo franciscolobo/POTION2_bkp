@@ -167,6 +167,7 @@ sub read_config_files { #read config files in the form element = value #comment
 
   # -=-=-= PATH TO EXTERNAL PROGRAMS =-=-=-
   $parameters{codeml_path} = read_config_file_line('codeml', $parameters{potion_dir}, $fh_potion_config);
+  $parameters{fastcodeml_path} = read_config_file_line('fastcodeml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{consense_path} = read_config_file_line('consense', $parameters{potion_dir}, $fh_potion_config);
   $parameters{dnaml_path} = read_config_file_line('dnaml', $parameters{potion_dir}, $fh_potion_config);
   $parameters{phyml_path} = read_config_file_line('phyml', $parameters{potion_dir}, $fh_potion_config);
@@ -278,6 +279,10 @@ sub check_parameters { #check for all parameters,
   if (!defined $parameters->{codeml_path}) { die ("No path to CODEML was specified in potion_config at $config_path, please open this file and fill the parameter 'codeml'.\n"); }
   if (!-s $parameters->{codeml_path}) { die ("The executable of CODEML wasn't found in the specified path, please check if the path is correct: $parameters->{codeml_path}\n"); }
   if (!-x $parameters->{codeml_path}) { die ("You don't have permission to execute the CODEML file specified at potion_config, please check permissions or replace the file\n"); }
+
+  if (!defined $parameters->{fastcodeml_path}) { die ("No path to FASTCODEML was specified in potion_config at $config_path, please open this file and fill the parameter 'fastcodeml'.\n"); }
+  if (!-s $parameters->{fastcodeml_path}) { die ("The executable of FASTCODEML wasn't found in the specified path, please check if the path is correct: $parameters->{fastcodeml_path}\n"); }
+  if (!-x $parameters->{fastcodeml_path}) { die ("You don't have permission to execute the FASTCODEML file specified at potion_config, please check permissions or replace the file\n"); }
 
   if (!defined $parameters->{consense_path}) { die ("No path to Consense was specified in potion_config at $config_path, please open this file and fill the parameter 'consense'.\n"); }
   if (!-s $parameters->{consense_path}) { die ("The executable of Consense wasn't found in the specified path, please check if the path is correct: $parameters->{consense_path}\n"); }

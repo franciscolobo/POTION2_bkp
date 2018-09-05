@@ -1,0 +1,54 @@
+
+Consensus tree program, version 3.697
+
+Species in order: 
+
+  1. A82
+  2. A83
+  3. A85
+  4. A84
+  5. A86
+  6. A81
+
+
+Sets included in the consensus tree
+
+Set (species in order)     How many times out of  100.00
+
+..****                     100.00
+..**..                     95.00
+..***.                     56.00
+
+
+Sets NOT included in consensus tree:
+
+Set (species in order)     How many times out of  100.00
+
+....**                     44.00
+...**.                      4.00
+..*.**                      1.00
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of 100.00 trees
+
+                  +-----------------------A81
+          +-100.0-|
+          |       |       +---------------A86
+          |       +--56.0-|
+  +-------|               |       +-------A85
+  |       |               +--95.0-|
+  |       |                       +-------A84
+  |       |
+  |       +-------------------------------A83
+  |
+  +---------------------------------------A82
+
+
+  remember: this is an unrooted tree!
+

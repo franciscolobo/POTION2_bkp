@@ -1,0 +1,56 @@
+[2J[Hseqboot: can't find input file "infile"
+Please enter a new file name> [2J[H
+Bootstrapping algorithm, version 3.697
+
+Settings for this run:
+  D      Sequence, Morph, Rest., Gene Freqs?  Molecular sequences
+  J  Bootstrap, Jackknife, Permute, Rewrite?  Bootstrap
+  %    Regular or altered sampling fraction?  regular
+  B      Block size for block-bootstrapping?  1 (regular bootstrap)
+  R                     How many replicates?  100
+  W              Read weights of characters?  No
+  C                Read categories of sites?  No
+  S     Write out data sets or just weights?  Data sets
+  I             Input sequences interleaved?  Yes
+  0      Terminal type (IBM PC, ANSI, none)?  ANSI
+  1       Print out the data at start of run  No
+  2     Print indications of progress of run  Yes
+
+  Y to accept these or type the letter for one to change
+Number of replicates?
+[2J[H
+Bootstrapping algorithm, version 3.697
+
+Settings for this run:
+  D      Sequence, Morph, Rest., Gene Freqs?  Molecular sequences
+  J  Bootstrap, Jackknife, Permute, Rewrite?  Bootstrap
+  %    Regular or altered sampling fraction?  regular
+  B      Block size for block-bootstrapping?  1 (regular bootstrap)
+  R                     How many replicates?  100
+  W              Read weights of characters?  No
+  C                Read categories of sites?  No
+  S     Write out data sets or just weights?  Data sets
+  I             Input sequences interleaved?  Yes
+  0      Terminal type (IBM PC, ANSI, none)?  ANSI
+  1       Print out the data at start of run  No
+  2     Print indications of progress of run  Yes
+
+  Y to accept these or type the letter for one to change
+
+Random number seed (must be odd)?
+
+completed replicate number   10
+completed replicate number   20
+completed replicate number   30
+completed replicate number   40
+completed replicate number   50
+completed replicate number   60
+completed replicate number   70
+completed replicate number   80
+completed replicate number   90
+completed replicate number  100
+
+Output written to file "outfile"
+
+Done.
+

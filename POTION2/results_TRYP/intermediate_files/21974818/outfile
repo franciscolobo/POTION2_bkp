@@ -1,0 +1,76 @@
+
+Consensus tree program, version 3.697
+
+Species in order: 
+
+  1. A157
+  2. A156
+  3. A155
+  4. A154
+  5. A159
+  6. A158
+  7. A153
+
+
+Sets included in the consensus tree
+
+Set (species in order)     How many times out of  100.00
+
+.....**                    78.00
+....***                    68.00
+..*****                    61.00
+...****                    48.00
+
+
+Sets NOT included in consensus tree:
+
+Set (species in order)     How many times out of  100.00
+
+....**.                    19.00
+.***...                    17.00
+..*.***                    15.00
+.*.****                    13.00
+.**....                    11.00
+.****..                    10.00
+..**...                     9.00
+...*.**                     8.00
+..*..**                     7.00
+..**.**                     6.00
+.*..***                     6.00
+.*.*...                     5.00
+...**..                     4.00
+.*...**                     3.00
+....*.*                     3.00
+.*..*..                     2.00
+.**.*..                     2.00
+.*.**..                     2.00
+..***..                     1.00
+..*.*..                     1.00
+.**.***                     1.00
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of 100.00 trees
+
+                                          +-------A153
+                                  +--78.0-|
+                          +--68.0-|       +-------A158
+                          |       |
+                  +--48.0-|       +---------------A159
+                  |       |
+          +--61.0-|       +-----------------------A154
+          |       |
+  +-------|       +-------------------------------A155
+  |       |
+  |       +---------------------------------------A156
+  |
+  +-----------------------------------------------A157
+
+
+  remember: this is an unrooted tree!
+

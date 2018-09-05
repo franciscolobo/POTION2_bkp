@@ -1,0 +1,17 @@
+FastCodeML 1.1.0:
+- Few corrections to accept pipe character also in sequence names
+- New option to fixed branch lengths (-bl)
+- New option fo manage easily number of threads (-nt)
+- Codeml optimizer is by default (-m 22)
+- Show branch lengths in default output
+- Show p0/p1/p2a/p2b & w0/kappa in default output
+- Display a warning if tree is rooted
+- Display FastCodemL version
+
+FastCodeML 1.0.1:
+- Added text files for LICENSE etc. Source files remain unchanged.
+- Version 1.0.1 contains additional information files, the sources are
+  unchanged with respect to 1.0.0.
+
+FastCodeML 1.0.0:
+- Initial release

@@ -48,7 +48,7 @@ my $mode = "site";   # deciding what you want POTION to do. Currently POTION
                      # check it out soon, we are implementing new analysis
                      # modes!
 
-my $create_conf = ""; # boolean to control if you wish POTION to create an empty 
+my $create_conf = ""; # boolean to control if you wish POTION to create an empty
                       # configuration file for you
 
 my $stringency = "standard"; # used to automatically populate a new configuration file
@@ -150,7 +150,7 @@ open (SUMMARY, ">", "$parameters_ref->{project_dir_path}/results/$parameters_ref
 
 my ($sequence_data_ref, $id2tmp_id_ref, $tmp_id2id_ref) = parse_genome_files($parameters_ref);
 
-my $hash_of_groups_ref = select_ortholog_groups($parameters_ref); 
+my $hash_of_groups_ref = select_ortholog_groups($parameters_ref);
 
 #select range of homologous groups to analyze, and populates sequence_data
 #with other information, such as genome of origin
@@ -175,7 +175,7 @@ elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_nt|codonphyml_co/i) {
 elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml_aa/i) { $seq_type = "aa"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /codonphyml/i) { $seq_type = "nt"; }
 elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_nt/i) { $seq_type = "nt"; }
-elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_aa/i) { $seq_type = "aa"; } 
+elsif ($parameters_ref->{phylogenetic_tree} =~ /raxml_aa/i) { $seq_type = "aa"; }
 else {
   die ("You must specify one out of five available parameters for phylogenetic tree reconstruction: proml, raxml_nt, raxml_aa, dnaml, phyml_aa or phyml_nt. You chose \"$parameters_ref->{phylogenetic_tree}\".\n");
 }
@@ -214,7 +214,7 @@ while (@id_rec_to_process > 0 || @f_tree_to_process > 0 || @model8_to_process > 
   }
 
   # handling paralelism and managing tasks to be processed
-  # removing groups from lines 
+  # removing groups from lines
   if    (@id_rec_to_process) { $ortholog_group = shift(@id_rec_to_process); }
   elsif (@f_tree_to_process) { $ortholog_group = shift(@f_tree_to_process); }
   elsif (@model8_to_process) { $ortholog_group = shift(@model8_to_process); }
@@ -247,7 +247,7 @@ while (@id_rec_to_process > 0 || @f_tree_to_process > 0 || @model8_to_process > 
       create_sequence_files ($clusters_ref, $sequence_data_ref, $id2tmp_id_ref, \$ortholog_group);
       create_protein_alignment_files ($parameters_ref, $clusters_ref, $tmp_id2id_ref, \$ortholog_group);
       create_codon_alignment_files ($sequence_data_ref, $tmp_id2id_ref, \$ortholog_group);
-      filter_divergent_sequences ($parameters_ref, $sequence_data_ref, $clusters_ref, $tmp_id2id_ref, $id2tmp_id_ref, \$ortholog_group); 
+      filter_divergent_sequences ($parameters_ref, $sequence_data_ref, $clusters_ref, $tmp_id2id_ref, $id2tmp_id_ref, \$ortholog_group);
 #      create_codon_alignment_files ($sequence_data_ref, $tmp_id2id_ref, \$ortholog_group);
       trim_sequences ($parameters_ref, \$ortholog_group);
       identify_recombination ($parameters_ref, \$ortholog_group);
@@ -256,7 +256,7 @@ while (@id_rec_to_process > 0 || @f_tree_to_process > 0 || @model8_to_process > 
     } elsif ($task eq 'f_tree') {
 
       my $task_time = time();
-      if ($parameters_ref->{mode} eq "site") { 
+      if ($parameters_ref->{mode} eq "site") {
         if ($parameters_ref->{phylogenetic_tree} !~ m/codonphyml|raxml/i ){
           create_bootstrap_files ($parameters_ref, \$seq_type, \$ortholog_group);
 	  }

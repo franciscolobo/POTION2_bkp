@@ -1,0 +1,263 @@
+      9    423
+
+A118                            ATG TTT CAA TTG GTT TCT GTG GCC GAG GTA AAT AAA GCG TAT GTG TCA TAT CCT GGA GGT GTT TCC ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA GGC CAC TAC CGT AGA TGG GTG GCT CGT GGA GAG AGT GAG GGT TGG AAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GCC GTG CTT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGT CAC CTT ACT TTC CAT GCC GCG GCA TCA ATG CAT CAC GAT TAT ATG CTA GTT GCT CTG CAA GGG AAG GTC GTG AAG GCG AAG GTT AGC TTC CGG TTT AGG GAA GTG CAA AGA CTT CCT GAT ACT ACT GTC AGA AAC TAC TGT TGC TGC GTG CTT CAG GCA CTG GGT CAG 
+A117                            ATG TTT CAA TTG GTT TCT GCG GCC GAG GTA AAT AAA GCT TAT GTG TCA TAT CCG GGA GGT GTT TCC ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA GGC CAC TAC CAT ATA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GTC GTG CTT TTG GAA AAT ATT GCA ACC AAT GAA AGG GAA GGC AAG TGT CAC CTT ACT TTC CAT GCT GCG ACA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCT CTG CGA GGG AAG GCC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA GTG --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+A119                            ATG TTT CAA TTG GTT TCT GTG GCC GAG GTA AAT AAA GCG TAT GTG TCA TAT CCT GGA GGT GTT TCC ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA GGC CAC TAC CAT AGA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GCA GTG CTT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGT CAC CTT ACT TTC CAT GCT GCG ACA TCA ATG CAT CAC GAT TAT ATG CTA GTT GCC CTG AGA GGG AAG GCC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA GTG --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+A120                            ATG TTT CAA TTG GTT TCT ACG GCC GAG CTA AAT AAA GCG TGT GTG TCA TAT CGT GGA GGT GTT TCC ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA GTG ACA TTA ATT GAA AAT TCA GGC CAC TAC CAT AGA TGG GTG GCT CGC GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC GGC TTT GTG GTT GTG TGT CCC GTG CCT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGT CAC CTT GCT TTC CAT GCT GCG ACA TCA ATG CAT CAC GAT TTT ATG CTA GTT GCC CTG CGA GGG AAG GCC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA ATG --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+A121                            ATG TTT CAA TTG GTT TCT GTG GCC GAG GTA AAT AAA GCG TAT GTG TCA TAT CCG GGA GGT GTT TTC ATG TGT CTT CTC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA GTG ACA TTA ATT GAA AAT TTA GGC CAC TAC CAT AGA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GCT GTG CTT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGT CAC CTT GCT TTC CAT GCT GCG ACA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCT CTG CAA GGG AAG GTC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA GTG CAG AGA CTT CCT GAT ACT ACT GTC AGA AAC TAC TGT TGC TGC GTG CTC CAG GCA CTG GGT CAG 
+A122                            --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA GGC CAC TAC CAT ATA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GTC GTG CTT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGC CAC CTT ACT TTC CAT GCC GCG GCA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCC CTG CGA GGG AAG GTC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA ATG --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+A123                            ATG TTT CAA TTG GTT TCT GCG GCC GAG GTA AAT AAA GCG CAT GTG TCA TAT CCG GGA GGT GTT TCC ATG TGT CTT CGC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA GGC CAG TAC CAT AGA TGG GTG GCT CGT GGA GAG AAT GAA GAT TGG GAT TAT TCT AAC AAT TTT GTG GTT GCG TGT GTC GTG CTT TTG GAA AAT ATT GCA ACC AAT GAA AGG GAA GGC AAG TGT CAC CTT ACT TTC CAT GCT GCG ACA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCT CTG CAA GGG AAG GTC GTG AAG GCG AAG GTT AGC TTC CGG TTT AGG GAA GTG CAA AGA CTT CCT GAT ACT ACT GTC AGA AAC TAC TGT TGT TGC GTG CTT CAG GCA CTG GGT CAG 
+A124                            ATG TTT CAA TTG GTT TCT GCG GCC GAG GTA AAT AAA GCG TAT GTG TCA TAT CCG GGA GGT GTT TCC ATG TGT CTT CTC TTT CCG TTT TGT CAC TGC GTT TGG GCT CAC GCA ATG ACA TTA ATT GAA ATT TCA AGC CAC TAC CAT AGA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGC TTT GTG GTT GTG TGT GCC GTG CTT TTG GAA AAT ATT GCA GCC AAT GAA AGG GAA GGC AAG TGT CAC CTT GCT TTC CAT GCT GCG ACA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCT CTG CAA GGG AAG GTC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA GTG CAG AGA CTT CCT GAT ACT ACT GTC AGA AAC TAC TGT TAC TGC GTG CTT CAG GCA CTG GGT CAG 
+A125                            --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ATG ACA TTA ATT GAA ATT CTA GGC CAC TAC CAT ATA TGG GTG GCT CGT GGA GAG AGT GAG GAT TGG GAT TAT TCT AAC AGT TTT GTG GTT GTG TGT GCC GTG CTT TTG GAA AAT ATT GCA AGC AAC GAA AGG GAA GGC AAG TGT CAC CTT ACT TTC CAT GCC GCG ACA TCA ATG CAT AAG AAT TAT ATG CTA GTT GCC CTG CGA GGG AAG GCC GTG AAG GCG AAG GTT AGC TTC CGG TTT AAG GAA GTG CAA AGA CTT CCT GAT ACT ACT GTC AGA AAC TAC TGT TGC TGC GTG CTC CAG GCA CTG GGT CAG 
+
+
+
+Printing out site pattern counts
+
+
+         9        345  P
+
+A118                             AAA AAC AAC AAG AAT AAT AAT AAT ACA ACT ACT AGA AGA AGC AGC AGG AGG AGT ATG ATG ATG ATG ATT ATT CAA CAA CAA CAC CAC CAC CAC CAG CAT CCG CCT CCT CGC CGG CGT CGT CTA CTG CTG CTT CTT CTT CTT CTT GAA GAG GAG GAG GAT GAT GCA GCA GCA GCA GCC GCC GCC GCC GCG GCG GCT GCT GCT GGA GGA GGC GGC GGG GGT GGT GGT GTA GTC GTC GTG GTG GTG GTG GTG GTG GTT GTT GTT TAC TAC TAT TAT TAT TAT TCA TCA TCA TCC TCT TCT TGC TGC TGC TGG TGG TGT TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A117                             AAA --- AAC AAG AAT AAT AAT GAT ACA --- ACT --- ATA AGC AGC AAG AGG AGT ATG ATG ATG ATG ATT ATT --- CAA CGA AAG CAC CAC CAC --- CAT CCG --- CCG CGC CGG CAT CGT CTA --- CTG --- --- CTT CTT CTT GAA GAG GAG GAG --- AAT --- ACA GCA GCA ACC GCC GCT GTC GCG GCT GCT GCT GCT GGA GGA GGC GGC GGG --- GAT GGT GTA --- GCC --- GCG GTG GTG GTG GTG GTT GTT GTT --- TAC TAT TAT TAT TAT TCA TCA TCA TCC TCT TCT --- --- TGC TGG TGG --- TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A119                             AAA --- AAC AAG AAT AAT AAT GAT ACA --- ACT --- AGA AGC AGC AAG AGG AGT ATG ATG ATG ATG ATT ATT --- CAA AGA CAC CAC CAC CAC --- CAT CCG --- CCT CGC CGG CAT CGT CTA --- CTG --- --- CTT CTT CTT GAA GAG GAG GAG --- GAT --- ACA GCA GCA GCC GCC GCT GCA GCG GCG GCC GCT GCT GGA GGA GGC GGC GGG --- GAT GGT GTA --- GCC --- GTG GTG GTG GTG GTG GTT GTT GTT --- TAC TAT TAT TAT TAT TCA TCA TCA TCC TCT TCT --- --- TGC TGG TGG --- TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A120                             AAA --- AAC AAG AAT AAT AAT GAT ACA --- GCT --- AGA AGC GGC AAG AGG AGT ATG ATG ATG GTG AAT ATT --- CAA CGA CAC CAC CAC CAC --- CAT CCG --- CGT CGC CGG CAT CGC CTA --- CTG --- --- CCT CTT CTT GAA GAG GAG GAG --- GAT --- ACA GCA GCA GCC GCC GCT CCC GCG GCG GCC GCT GCT GGA GGA GGC GGC GGG --- GAT GGT CTA --- GCC --- ACG ATG GTG GTG GTG GTT GTT GTT --- TAC TAT TAT TGT TTT TCA TCA TCA TCC TCT TCT --- --- TGC TGG TGG --- TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A121                             AAA AAC AAC AAG AAT AAT AAT GAT ACA ACT GCT AGA AGA AGC AGC AAG AGG AGT ATG ATG ATG GTG AAT ATT CAG CAA CAA AAG CAC CAC CAC CAG CAT CCG CCT CCG CTC CGG CAT CGT CTA CTG CTG CTC CTT CTT CTT CTT GAA GAG GAG GAG GAT AAT GCA ACA GCA GCA GCC GCC GCT GCT GCG GCG GCT GCT GCT GGA GGA GGC GGC GGG GGT GAT GGT GTA GTC GTC GTG GTG GTG GTG GTG GTG GTT GTT GTT TAC TAC TAT TAT TAT TAT TCA TCA TTA TTC TCT TCT TGC TGC TGC TGG TGG TGT TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A122                             --- --- AAC AAG --- AAT AAT GAT ACA --- ACT --- ATA AGC AGC AAG AGG AGT --- ATG ATG ATG ATT ATT --- --- CGA AAG CAC CAC CAC --- CAT CCG --- --- CGC CGG CAT CGT CTA --- CTG --- --- CTT CTT CTT GAA --- GAG GAG --- AAT --- GCA GCA GCA GCC --- GCC GTC GCG --- GCC GCT GCT --- GGA GGC GGC GGG --- GAT --- --- --- GTC --- --- ATG --- GTG GTG --- GTT GTT --- TAC --- TAT --- TAT --- TCA TCA --- --- TCT --- --- TGC TGG TGG --- TGC TGT TGT TTA TTC --- TTG --- TTT TTT
+A123                             AAA AAC AAC AAG AAT AAT AAT GAT ACA ACT ACT AGA AGA AGC AAT AGG AGG AAT ATG ATG ATG ATG ATT ATT CAA CAA CAA AAG CAC CAC CAG CAG CAT CCG CCT CCG CGC CGG CAT CGT CTA CTG CTG CTT CTT CTT CTT CTT GAA GAG GAA GAG GAT AAT GCA ACA GCA GCA ACC GCC GCT GTC GCG GCG GCT GCT GCT GGA GGA GGC GGC GGG GGT GAT GGT GTA GTC GTC GTG GCG GTG GTG GCG GTG GTT GTT GTT TAC TAC TAT TAT CAT TAT TCA TCA TCA TCC TCT TCT TGC TGT TGC TGG TGG TGT TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A124                             AAA AAC AAC AAG AAT AAT AAT GAT ACA ACT GCT AGA AGA AGC AGC AAG AGG AGT ATG ATG ATG ATG ATT ATT CAG CAA CAA AAG CAC CAC CAC CAG CAT CCG CCT CCG CTC CGG CAT CGT CTA CTG CTG CTT CTT CTT CTT CTT GAA GAG GAG GAG GAT AAT GCA ACA GCA GCA GCC GCC GCT GCC GCG GCG GCT GCT GCT GGA GGA AGC GGC GGG GGT GAT GGT GTA GTC GTC GTG GCG GTG GTG GTG GTG GTT GTT GTT TAC TAC TAT TAT TAT TAT TCA TCA TCA TCC TCT TCT TGC TAC TGC TGG TGG TGT TGT TGT TGT TTA TTC TTG TTG TTT TTT TTT
+A125                             --- AAC AAC AAG --- AAC AAT GAT ACA ACT ACT AGA ATA AGC AGT AAG AGG AGT --- --- ATG ATG ATT ATT CAA --- CGA AAG --- CAC CAC CAG CAT --- CCT --- --- CGG CAT CGT CTA CTG CTG CTC CTT CTT --- CTT GAA --- GAG GAG GAT AAT GCA ACA --- GCA AGC --- GCC GCC GCG --- GCC --- GCT --- GGA GGC GGC GGG GGT GAT --- --- GTC GCC GTG --- GTG --- GTG GTG --- --- GTT TAC TAC --- TAT --- TAT --- TCA CTA --- --- TCT TGC TGC --- --- TGG TGT TGT --- TGT TTA TTC --- TTG --- --- TTT
+
+
+
+    1    1    1    4    1    1    1    1    1    2    1    2    1    1    1
+    1    1    1    1    1    2    1    1    2    1    1    1    1    2    1
+    1    2    2    1    1    1    1    1    1    1    1    1    1    1    1
+    1    1    1    5    1    1    1    1    1    1    1    1    1    1    1
+    1    1    2    1    1    1    1    1    1    1    1    1    1    1    1
+    1    1    1    1    1    1    1    1    4    2    1    3    1    1    1
+    1    1    1    1    1    1    1    1    1    1    1    1    1    2    1
+    1    2    1    1    2    1    1    1    2    2
+
+CODONML (in paml version 4.8a, August 2014)  21586974.cluster.aa.fa.aln.nt.phy.trim
+Model: One dN/dS ratio for branches, 
+Codon frequency model: F3x4
+Site-class models:  NearlyNeutral
+ns =   9  ls = 141
+
+Codon usage in sequences
+--------------------------------------------------------------------------------------------------------------------------------------
+Phe TTT   5   5   5   6   5   4 | Ser TCT   2   2   2   2   2   1 | Tyr TAT   4   4   4   2   4   2 | Cys TGT   5   4   4   5   5   3
+    TTC   2   2   2   2   3   2 |     TCC   1   1   1   1   0   0 |     TAC   2   1   1   1   2   1 |     TGC   3   1   1   1   3   2
+Leu TTA   1   1   1   1   2   1 |     TCA   3   3   3   3   2   2 | *** TAA   0   0   0   0   0   0 | *** TGA   0   0   0   0   0   0
+    TTG   2   2   2   2   2   1 |     TCG   0   0   0   0   0   0 |     TAG   0   0   0   0   0   0 | Trp TGG   3   3   3   3   3   3
+--------------------------------------------------------------------------------------------------------------------------------------
+Leu CTT   5   3   3   2   4   3 | Pro CCT   2   0   1   1   1   0 | His CAT   2   3   3   3   3   3 | Arg CGT   2   1   1   1   1   1
+    CTC   0   0   0   0   2   0 |     CCC   0   0   0   1   0   0 |     CAC   5   4   5   5   4   4 |     CGC   1   1   1   2   0   1
+    CTA   1   1   1   2   1   1 |     CCA   0   0   0   0   0   0 | Gln CAA   3   1   1   1   2   0 |     CGA   0   1   0   1   0   1
+    CTG   2   1   1   1   2   1 |     CCG   1   2   1   1   2   1 |     CAG   2   0   0   0   3   0 |     CGG   1   1   1   1   1   1
+--------------------------------------------------------------------------------------------------------------------------------------
+Ile ATT   3   3   3   2   2   3 | Thr ACT   3   1   1   0   2   1 | Asn AAT   4   4   3   4   5   3 | Ser AGT   1   1   1   1   1   1
+    ATC   0   0   0   0   0   0 |     ACC   0   1   0   0   0   0 |     AAC   2   1   1   1   2   1 |     AGC   2   2   2   1   2   2
+    ATA   0   1   0   0   0   1 |     ACA   1   2   2   2   2   1 | Lys AAA   1   1   1   1   1   0 | Arg AGA   3   0   2   1   3   0
+Met ATG   5   5   5   5   4   5 |     ACG   0   0   0   1   0   0 |     AAG   4   6   5   5   6   6 |     AGG   2   1   1   1   1   1
+--------------------------------------------------------------------------------------------------------------------------------------
+Val GTT   6   6   6   6   6   4 | Ala GCT   3   5   3   4   6   2 | Asp GAT   2   2   3   3   3   2 | Gly GGT   3   1   1   1   2   0
+    GTC   2   1   0   0   2   2 |     GCC   4   2   4   4   2   3 |     GAC   0   0   0   0   0   0 |     GGC   2   2   2   3   2   2
+    GTA   1   1   1   0   1   0 |     GCA   4   2   3   2   3   3 | Glu GAA   5   5   5   5   5   5 |     GGA   2   2   2   2   2   1
+    GTG   9   7   8   7  10   5 |     GCG   3   3   3   3   3   2 |     GAG   3   3   3   3   3   2 |     GGG   1   1   1   1   1   1
+--------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+Phe TTT   5   5   2 | Ser TCT   2   2   1 | Tyr TAT   3   4   2 | Cys TGT   6   5   3
+    TTC   2   2   2 |     TCC   1   1   0 |     TAC   2   3   2 |     TGC   2   2   2
+Leu TTA   1   1   1 |     TCA   3   3   1 | *** TAA   0   0   0 | *** TGA   0   0   0
+    TTG   2   2   1 |     TCG   0   0   0 |     TAG   0   0   0 | Trp TGG   3   3   2
+--------------------------------------------------------------------------------------
+Leu CTT   5   5   3 | Pro CCT   1   1   1 | His CAT   4   3   3 | Arg CGT   1   1   1
+    CTC   0   1   1 |     CCC   0   0   0 |     CAC   3   4   2 |     CGC   1   0   0
+    CTA   1   1   2 |     CCA   0   0   0 | Gln CAA   3   2   1 |     CGA   0   0   1
+    CTG   2   2   2 |     CCG   2   2   0 |     CAG   3   3   2 |     CGG   1   1   1
+--------------------------------------------------------------------------------------
+Ile ATT   3   3   3 | Thr ACT   3   2   3 | Asn AAT   6   4   2 | Ser AGT   0   1   2
+    ATC   0   0   0 |     ACC   1   0   0 |     AAC   2   2   3 |     AGC   1   3   2
+    ATA   0   0   1 |     ACA   2   2   2 | Lys AAA   1   1   0 | Arg AGA   3   3   2
+Met ATG   5   5   3 |     ACG   0   0   0 |     AAG   5   6   6 |     AGG   2   1   1
+--------------------------------------------------------------------------------------
+Val GTT   6   6   3 | Ala GCT   4   5   1 | Asp GAT   3   3   3 | Gly GGT   2   2   1
+    GTC   3   2   1 |     GCC   1   3   4 |     GAC   0   0   0 |     GGC   2   1   2
+    GTA   1   1   0 |     GCA   3   3   2 | Glu GAA   6   5   5 |     GGA   2   2   1
+    GTG   7   8   7 |     GCG   5   4   2 |     GAG   2   3   2 |     GGG   1   1   1
+--------------------------------------------------------------------------------------
+
+Codon position x base (3x4) table for each sequence.
+
+#1: A118           
+position  1:    T:0.23404    C:0.19149    A:0.21986    G:0.35461
+position  2:    T:0.31206    C:0.19149    A:0.27660    G:0.21986
+position  3:    T:0.36879    C:0.18440    A:0.17730    G:0.26950
+Average         T:0.30496    C:0.18913    A:0.22459    G:0.28132
+
+#2: A117           
+position  1:    T:0.24167    C:0.15833    A:0.24167    G:0.35833
+position  2:    T:0.32500    C:0.20000    A:0.29167    G:0.18333
+position  3:    T:0.37500    C:0.15833    A:0.17500    G:0.29167
+Average         T:0.31389    C:0.17222    A:0.23611    G:0.27778
+
+#3: A119           
+position  1:    T:0.24167    C:0.15833    A:0.22500    G:0.37500
+position  2:    T:0.31667    C:0.20000    A:0.29167    G:0.19167
+position  3:    T:0.36667    C:0.16667    A:0.18333    G:0.28333
+Average         T:0.30833    C:0.17500    A:0.23333    G:0.28333
+
+#4: A120           
+position  1:    T:0.24167    C:0.18333    A:0.20833    G:0.36667
+position  2:    T:0.30000    C:0.20833    A:0.28333    G:0.20833
+position  3:    T:0.35833    C:0.18333    A:0.17500    G:0.28333
+Average         T:0.30000    C:0.19167    A:0.22222    G:0.28611
+
+#5: A121           
+position  1:    T:0.23404    C:0.18440    A:0.21986    G:0.36170
+position  2:    T:0.32624    C:0.17730    A:0.30496    G:0.19149
+position  3:    T:0.36879    C:0.17021    A:0.17021    G:0.29078
+Average         T:0.30969    C:0.17730    A:0.23168    G:0.28132
+
+#6: A122           
+position  1:    T:0.22449    C:0.17347    A:0.25510    G:0.34694
+position  2:    T:0.33673    C:0.16327    A:0.29592    G:0.20408
+position  3:    T:0.33673    C:0.20408    A:0.16327    G:0.29592
+Average         T:0.29932    C:0.18027    A:0.23810    G:0.28231
+
+#7: A123           
+position  1:    T:0.22695    C:0.19149    A:0.24113    G:0.34043
+position  2:    T:0.30496    C:0.19858    A:0.30496    G:0.19149
+position  3:    T:0.38298    C:0.14894    A:0.18440    G:0.28369
+Average         T:0.30496    C:0.17967    A:0.24350    G:0.27187
+
+#8: A124           
+position  1:    T:0.23404    C:0.18440    A:0.23404    G:0.34752
+position  2:    T:0.31206    C:0.19858    A:0.30496    G:0.18440
+position  3:    T:0.36879    C:0.17021    A:0.17021    G:0.29078
+Average         T:0.30496    C:0.18440    A:0.23641    G:0.27423
+
+#9: A125           
+position  1:    T:0.18269    C:0.19231    A:0.28846    G:0.33654
+position  2:    T:0.30769    C:0.16346    A:0.31731    G:0.21154
+position  3:    T:0.32692    C:0.20192    A:0.18269    G:0.28846
+Average         T:0.27244    C:0.18590    A:0.26282    G:0.27885
+
+Sums of codon usage counts
+------------------------------------------------------------------------------
+Phe F TTT      42 | Ser S TCT      16 | Tyr Y TAT      29 | Cys C TGT      40
+      TTC      19 |       TCC       6 |       TAC      15 |       TGC      17
+Leu L TTA      10 |       TCA      23 | *** * TAA       0 | *** * TGA       0
+      TTG      16 |       TCG       0 |       TAG       0 | Trp W TGG      26
+------------------------------------------------------------------------------
+Leu L CTT      33 | Pro P CCT       8 | His H CAT      27 | Arg R CGT      10
+      CTC       4 |       CCC       1 |       CAC      36 |       CGC       7
+      CTA      11 |       CCA       0 | Gln Q CAA      14 |       CGA       4
+      CTG      14 |       CCG      12 |       CAG      13 |       CGG       9
+------------------------------------------------------------------------------
+Ile I ATT      25 | Thr T ACT      16 | Asn N AAT      35 | Ser S AGT       9
+      ATC       0 |       ACC       2 |       AAC      15 |       AGC      17
+      ATA       3 |       ACA      16 | Lys K AAA       7 | Arg R AGA      17
+Met M ATG      42 |       ACG       1 |       AAG      49 |       AGG      11
+------------------------------------------------------------------------------
+Val V GTT      49 | Ala A GCT      33 | Asp D GAT      24 | Gly G GGT      13
+      GTC      13 |       GCC      27 |       GAC       0 |       GGC      18
+      GTA       6 |       GCA      25 | Glu E GAA      46 |       GGA      16
+      GTG      68 |       GCG      28 |       GAG      24 |       GGG       9
+------------------------------------------------------------------------------
+
+(Ambiguity data are not used in the counts.)
+
+
+Codon position x base (3x4) table, overall
+
+position  1:    T:0.23002    C:0.18028    A:0.23535    G:0.35435
+position  2:    T:0.31528    C:0.19005    A:0.29663    G:0.19805
+position  3:    T:0.36323    C:0.17496    A:0.17584    G:0.28597
+Average         T:0.30284    C:0.18176    A:0.23594    G:0.27946
+
+Codon frequencies under model, for use in evolver (TTT TTC TTA TTG ... GGG):
+  0.02742506  0.01320963  0.01327668  0.02159137
+  0.01653229  0.00796299  0.00800341  0.01301564
+  0.02580274  0.01242821  0.00000000  0.00000000
+  0.01722758  0.00829788  0.00000000  0.01356303
+  0.02149532  0.01035349  0.01040605  0.01692297
+  0.01295774  0.00624126  0.00627294  0.01020145
+  0.02022377  0.00974103  0.00979048  0.01592189
+  0.01350269  0.00650374  0.00653676  0.01063048
+  0.02806039  0.01351564  0.01358425  0.02209156
+  0.01691528  0.00814746  0.00818882  0.01331716
+  0.02640048  0.01271613  0.01278067  0.02078473
+  0.01762667  0.00849011  0.00853320  0.01387723
+  0.04224942  0.02034997  0.02045327  0.03326238
+  0.02546867  0.01226730  0.01232957  0.02005113
+  0.03975016  0.01914617  0.01924335  0.03129475
+  0.02653978  0.01278322  0.01284811  0.02089440
+
+
+
+Nei & Gojobori 1986. dN/dS (dN, dS)
+(Pairwise deletion)
+(Note: This matrix is not used in later ML. analysis.
+Use runmode = -2 for ML pairwise comparison.)
+
+A118                
+A117                 1.3763 (0.0520 0.0378)
+A119                 0.6156 (0.0274 0.0445) 0.3944 (0.0255 0.0646)
+A120                 2.0042 (0.0755 0.0377) 1.3276 (0.0675 0.0509) 1.2659 (0.0481 0.0380)
+A121                 0.8191 (0.0441 0.0539) 1.7478 (0.0442 0.0253) 0.9382 (0.0423 0.0450) 1.3132 (0.0674 0.0513)
+A122                 1.5469 (0.0494 0.0319) 0.3609 (0.0176 0.0487) 0.5378 (0.0355 0.0660) 1.3046 (0.0634 0.0486) 0.6769 (0.0447 0.0660)
+A123                 0.8828 (0.0474 0.0537) 0.8638 (0.0329 0.0381) 0.7485 (0.0537 0.0718) 1.4797 (0.0954 0.0645) 0.7204 (0.0473 0.0656) 0.5354 (0.0447 0.0834)
+A124                 1.2811 (0.0409 0.0319) 2.3204 (0.0292 0.0126) 0.7690 (0.0347 0.0451) 1.7611 (0.0673 0.0382) 1.0154 (0.0217 0.0213) 0.7179 (0.0354 0.0493) 0.8702 (0.0376 0.0432)
+A125                 0.9482 (0.0627 0.0662) 0.2122 (0.0183 0.0862) 0.3692 (0.0397 0.1075) 0.9841 (0.0847 0.0860) 0.3177 (0.0339 0.1066) 0.5933 (0.0396 0.0668) 0.4995 (0.0492 0.0985) 0.4064 (0.0403 0.0992)
+
+
+TREE #  1:  (((((7, ((9, 6), 2)), (8, 5)), 1), 3), 4);   MP score: -1
+This is a rooted tree.  Please check!
+lnL(ntime: 16  np: 19):   -980.975319      +0.000000
+  10..11   11..12   12..13   13..14   14..7    14..15   15..16   16..9    16..6    15..2    13..17   17..8    17..5    12..1    11..3    10..4  
+ 0.024436 0.025035 0.037001 0.015106 0.070267 0.032363 0.019123 0.067192 0.054134 0.000004 0.023573 0.015499 0.052716 0.048738 0.020160 0.102812 6.376889 0.502690 0.000001
+
+Note: Branch length is defined as number of nucleotide substitutions per codon (not per neucleotide site).
+
+tree length =   0.60816
+
+(((((7: 0.070267, ((9: 0.067192, 6: 0.054134): 0.019123, 2: 0.000004): 0.032363): 0.015106, (8: 0.015499, 5: 0.052716): 0.023573): 0.037001, 1: 0.048738): 0.025035, 3: 0.020160): 0.024436, 4: 0.102812);
+
+(((((A123: 0.070267, ((A125: 0.067192, A122: 0.054134): 0.019123, A117: 0.000004): 0.032363): 0.015106, (A124: 0.015499, A121: 0.052716): 0.023573): 0.037001, A118: 0.048738): 0.025035, A119: 0.020160): 0.024436, A120: 0.102812);
+
+Detailed output identifying parameters
+
+kappa (ts/tv) =  6.37689
+
+
+dN/dS (w) for site classes (K=2)
+
+p:   0.50269  0.49731
+w:   0.00000  1.00000
+
+dN & dS for each branch
+
+ branch          t       N       S   dN/dS      dN      dS  N*dN  S*dS
+
+  10..11      0.024    303.0    120.0   0.4973   0.0063   0.0127    1.9    1.5
+  11..12      0.025    303.0    120.0   0.4973   0.0065   0.0130    2.0    1.6
+  12..13      0.037    303.0    120.0   0.4973   0.0096   0.0193    2.9    2.3
+  13..14      0.015    303.0    120.0   0.4973   0.0039   0.0079    1.2    0.9
+  14..7       0.070    303.0    120.0   0.4973   0.0182   0.0366    5.5    4.4
+  14..15      0.032    303.0    120.0   0.4973   0.0084   0.0169    2.5    2.0
+  15..16      0.019    303.0    120.0   0.4973   0.0050   0.0100    1.5    1.2
+  16..9       0.067    303.0    120.0   0.4973   0.0174   0.0350    5.3    4.2
+  16..6       0.054    303.0    120.0   0.4973   0.0140   0.0282    4.2    3.4
+  15..2       0.000    303.0    120.0   0.4973   0.0000   0.0000    0.0    0.0
+  13..17      0.024    303.0    120.0   0.4973   0.0061   0.0123    1.9    1.5
+  17..8       0.015    303.0    120.0   0.4973   0.0040   0.0081    1.2    1.0
+  17..5       0.053    303.0    120.0   0.4973   0.0137   0.0275    4.1    3.3
+  12..1       0.049    303.0    120.0   0.4973   0.0126   0.0254    3.8    3.0
+  11..3       0.020    303.0    120.0   0.4973   0.0052   0.0105    1.6    1.3
+  10..4       0.103    303.0    120.0   0.4973   0.0266   0.0536    8.1    6.4
+
+
+Time used:  0:22

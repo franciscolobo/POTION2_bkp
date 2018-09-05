@@ -1,0 +1,18 @@
+
+#Mean Percentage of identity:                            0.974928
+#Mean Percentage of identity with most similar sequence: 0.985207
+
+#Percentage of identity matrix:
+A43  	0         	97.2713   	97.9133   	96.9502   	96.2279   	
+A40  	97.2713   	0         	98.8737   	96.9429   	97.0233   	
+A41  	97.9133   	98.8737   	0         	97.7474   	97.506    	
+A42  	96.9502   	96.9429   	97.7474   	0         	98.4714   	
+A39  	96.2279   	97.0233   	97.506    	98.4714   	0         	
+
+#Percentage of identity with most similar sequence:
+A43  	97.9133		A41
+A40  	98.8737		A41
+A41  	98.8737		A40
+A42  	98.4714		A39
+A39  	98.4714		A42
+

@@ -1,0 +1,839 @@
+{
+   GotoBLAS2.supp
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   fun:blas_thread_init
+   fun:gotoblas_init
+   obj:/project/csvis/mvalle/GotoBLAS2/libgoto2_barcelonap-r1.13.so
+   obj:/project/csvis/mvalle/GotoBLAS2/libgoto2_barcelonap-r1.13.so
+   obj:*
+   obj:/lib64/ld-2.9.so
+   obj:/lib64/ld-2.9.so
+   obj:/lib64/ld-2.9.so
+}
+{
+   Libgfortran.supp
+   Memcheck:Leak
+   fun:malloc
+   obj:/usr/lib64/libgfortran.so.3.0.0
+   obj:/usr/lib64/libgfortran.so.3.0.0
+   obj:/usr/lib64/libgfortran.so.3.0.0
+   obj:/usr/lib64/libgfortran.so.3.0.0
+   obj:/usr/lib64/libgfortran.so.3.0.0
+   obj:*
+   obj:/lib64/ld-2.9.so
+   obj:/lib64/ld-2.9.so
+   obj:/lib64/ld-2.9.so
+   obj:*
+   obj:*
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:_dl_relocate_object
+   fun:dl_main
+   fun:_dl_sysdep_start
+   fun:_dl_start
+   obj:/lib64/ld-2.11.1.so
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlsym
+   fun:mkl_serv_load_fun
+   fun:mkl_blas_dgemm_mscale
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:open_path
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_dll
+   fun:mkl_blas_dnrm2
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_dll
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_dll
+   fun:mkl_blas_dnrm2
+   fun:mkl_lapack_dlarfg
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:realloc
+   obj:/usr/lib64/libgomp.so.1.0.0
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb
+   fun:_ZN15BranchSiteModel18maximizeLikelihoodER6Forestjbb
+   fun:_ZN22BranchSiteModelNullHyp12computeModelER6Forestjbbb
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_dll
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb
+   fun:_ZN15BranchSiteModel18maximizeLikelihoodER6Forestjbb
+   fun:_ZN22BranchSiteModelNullHyp12computeModelER6Forestjbbb
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestjRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_dormql
+   fun:mkl_lapack_dormtr
+   fun:mkl_lapack_dormtr
+   fun:mkl_lapack_dsyevr
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_dtrmm_run_r
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_dtrmm
+   fun:mkl_lapack_dlarfb
+   fun:mkl_lapack_dlarfb
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:monstartup
+   fun:__gmon_start__
+   obj:/lib64/libdl-2.11.1.so
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_dtrmm
+   fun:mkl_lapack_dlarft
+   fun:mkl_lapack_dlarft
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_dormql
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlsym
+   fun:mkl_serv_load_fun
+   fun:mkl_blas_dgemm_mscale
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:DGEMM
+   fun:_ZNK16TransitionMatrix27computeFullTransitionMatrixEPdd
+   fun:_ZN19TransitionMatrixSet18computeMatrixSetH0ERK16TransitionMatrixS2_ddjRKSt6vectorIdSaIdEE.omp_fn.1
+   obj:/usr/lib64/libgomp.so.1.0.0
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:realloc
+   obj:/usr/lib64/libgomp.so.1.0.0
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb
+   fun:_ZN17MaximizerFunction4wrapERKSt6vectorIdSaIdEERS2_Pv
+   fun:_ZN5nlopt3opt7myvfuncEjPKdPdPv
+   fun:f_max
+   fun:luksan_plis
+   fun:nlopt_optimize
+   fun:_ZN15BranchSiteModel18maximizeLikelihoodER6Forestmbb
+   fun:_ZN22BranchSiteModelNullHyp12computeModelER6Forestmbbb
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb
+   fun:_ZN17MaximizerFunction4wrapERKSt6vectorIdSaIdEERS2_Pv
+   fun:_ZN5nlopt3opt7myvfuncEjPKdPdPv
+   fun:f_max
+   fun:luksan_plis
+   fun:nlopt_optimize
+   fun:_ZN15BranchSiteModel18maximizeLikelihoodER6Forestmbb
+   fun:_ZN22BranchSiteModelNullHyp12computeModelER6Forestmbbb
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb
+   fun:_ZN17MaximizerFunction4wrapERKSt6vectorIdSaIdEERS2_Pv
+   fun:_ZN5nlopt3opt7myvfuncEjPKdPdPv
+   fun:f_max
+   fun:luksan_plis
+   fun:nlopt_optimize
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix13eigenRealSymmEPdiS0_S0_
+   fun:_ZN16TransitionMatrix9eigenQREVEiPKdPKb
+   fun:_ZN22BranchSiteModelNullHyp17oneCycleMaximizerER6ForestmRKSt6vectorIdSaIdEEb.omp_fn.2
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:realloc
+   obj:/usr/lib64/libgomp.so.1.0.0
+   obj:/usr/lib64/libgomp.so.1.0.0
+   fun:_ZN6Forest16loadTreeAndGenesERK9PhyloTreeRK5Genesb
+   fun:main
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Param
+   sched_setaffinity(mask)
+   fun:syscall
+   fun:__kmp_affinity_determine_capable
+   fun:_Z20__kmp_env_initializePKc
+   fun:__kmp_serial_initialize
+   fun:__kmp_internal_begin
+   fun:__kmpc_begin
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_mkl_malloc
+   fun:_vmlSetMode
+   fun:vmlSetMode
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_vml_service_load_vml_dll
+   fun:vmlSetMode
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:open_path
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+   fun:mkl_lapack_dsyevr
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:open_path
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_vml_service_load_vml_dll
+   fun:vmlSetMode
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_vml_service_load_vml_dll
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_vml_service_load_vml_dll
+   fun:vmlSetMode
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:_Znwm
+   fun:_ZN16CodonFrequencies11getInstanceEv
+   fun:_ZN6Forest16loadTreeAndGenesERK9PhyloTreeRK5Genesb
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_vml_service_load_vml_dll
+   fun:vmlSetMode
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:_Z13alignedMallocmm
+   fun:_ZN16CodonFrequencies11getInstanceEv
+   fun:_ZN6Forest16loadTreeAndGenesERK9PhyloTreeRK5Genesb
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix9eigenQREVEv
+   fun:_ZN22BranchSiteModelNullHyp17computeLikelihoodER6ForestjRKSt6vectorIdSaIdEEb
+   fun:_ZN17MaximizerFunction4wrapERKSt6vectorIdSaIdEERS2_Pv
+   fun:_ZN5nlopt3opt7myvfuncEjPKdPdPv
+   fun:f_max
+   fun:luksan_plis
+   fun:nlopt_optimize
+   fun:_ZN15BranchSiteModel18maximizeLikelihoodER6Forestmbbj
+   fun:_ZN22BranchSiteModelNullHyp12computeModelER6Forestmbbbj
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_error
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen@@GLIBC_2.2.5
+   fun:mkl_serv_load_lapack_dll
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_dormql
+   fun:mkl_lapack_dormtr
+   fun:mkl_lapack_dormtr
+   fun:mkl_lapack_dsyevr
+   fun:mkl_lapack_dsyevr
+   fun:DSYEVR
+   fun:_ZN16TransitionMatrix9eigenQREVEv
+   fun:_ZN22BranchSiteModelNullHyp17computeLikelihoodER6ForestjRKSt6vectorIdSaIdEEb
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dsyrk_u_2
+   fun:mkl_blas_dsyrk_u_1
+   fun:mkl_blas_xdsyrk
+   fun:mkl_blas_xdsyrk
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dgemm
+   fun:mkl_lapack_dlarfb
+   fun:mkl_lapack_dlarfb
+   fun:mkl_lapack_xdormql
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm_par
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_xdgemm
+   fun:mkl_blas_dsyrk_u_1
+   fun:mkl_blas_xdsyrk
+   fun:mkl_blas_xdsyrk
+   fun:mkl_blas_dsyrk
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   fun:malloc
+   fun:mkl_serv_allocate
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_dgemm_get_bufs
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_xdtrmm
+   fun:mkl_blas_dtrmm
+   fun:mkl_lapack_dlarfb
+   fun:mkl_lapack_dlarfb
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_xdormql
+   fun:mkl_lapack_dormql
+}

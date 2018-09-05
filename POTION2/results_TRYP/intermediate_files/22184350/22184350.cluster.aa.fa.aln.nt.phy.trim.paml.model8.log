@@ -1,0 +1,538 @@
+
+ 15         verbose | verbose                1.00
+  7         runmode | runmode                0.00
+  4         seqtype | seqtype                1.00
+ 13       CodonFreq | CodonFreq              2.00
+  9           clock | clock                  0.00
+ 18          aaDist | aaDist                 0.00
+ 19      aaRatefile | aaRatefile             1.00
+ 16           model | model                  0.00
+ 20         NSsites | NSsites                8.00
+ 22           icode | icode                  0.00
+ 23           Mgene | Mgene                  0.00
+ 24       fix_kappa | fix_kappa              0.00
+ 25           kappa | kappa                  2.00
+ 26       fix_omega | fix_omega              0.00
+ 27           omega | omega                  0.40
+ 28       fix_alpha | fix_alpha              1.00
+ 29           alpha | alpha                  0.00
+ 30          Malpha | Malpha                 0.00
+ 31           ncatG | ncatG                  8.00
+ 11           getSE | getSE                  0.00
+ 12    RateAncestor | RateAncestor           1.00
+ 36      Small_Diff | Small_Diff             0.00
+  6       cleandata | cleandata              0.00
+  8          method | method                 0.00
+CODONML in paml version 4.8a, August 2014
+
+----------------------------------------------
+Phe F TTT | Ser S TCT | Tyr Y TAT | Cys C TGT
+      TTC |       TCC |       TAC |       TGC
+Leu L TTA |       TCA | *** * TAA | *** * TGA
+      TTG |       TCG |       TAG | Trp W TGG
+----------------------------------------------
+Leu L CTT | Pro P CCT | His H CAT | Arg R CGT
+      CTC |       CCC |       CAC |       CGC
+      CTA |       CCA | Gln Q CAA |       CGA
+      CTG |       CCG |       CAG |       CGG
+----------------------------------------------
+Ile I ATT | Thr T ACT | Asn N AAT | Ser S AGT
+      ATC |       ACC |       AAC |       AGC
+      ATA |       ACA | Lys K AAA | Arg R AGA
+Met M ATG |       ACG |       AAG |       AGG
+----------------------------------------------
+Val V GTT | Ala A GCT | Asp D GAT | Gly G GGT
+      GTC |       GCC |       GAC |       GGC
+      GTA |       GCA | Glu E GAA |       GGA
+      GTG |       GCG |       GAG |       GGG
+----------------------------------------------
+Nice code, uuh?
+
+
+Ambiguity character definition table:
+
+T (1): T 
+C (1): C 
+A (1): A 
+G (1): G 
+U (1): T 
+Y (2): T C 
+R (2): A G 
+M (2): C A 
+K (2): T G 
+S (2): C G 
+W (2): T A 
+H (3): T C A 
+B (3): T C G 
+V (3): C A G 
+D (3): T A G 
+- (4): T C A G 
+N (4): T C A G 
+? (4): T C A G 
+
+ns = 4  	ls = 543
+Reading sequences, interlaved format..
+Reading seq # 1: A3     Reading seq # 2: A2     Reading seq # 3: A1     Reading seq # 4: A4     
+block   1:     60     60     60     60
+block   2:    120    120    120    120
+block   3:    180    180    180    180
+block   4:    240    240    240    240
+block   5:    300    300    300    300
+block   6:    360    360    360    360
+block   7:    420    420    420    420
+block   8:    480    480    480    480
+block   9:    540    540    540    540
+block  10:    543    543    543    543
+Sequences read..
+Counting site patterns..  0:00
+         105 patterns at      181 /      181 sites (100.0%),  0:00
+1 ambiguous codons are seen in the data:
+ ---
+Counting codons..
+
+  2   1:Sites    93.7 +  317.3 =  411.0	Diffs     5.5 +   15.5 =   21.0
+  3   1:Sites   111.4 +  398.6 =  510.0	Diffs    17.2 +   56.8 =   74.0
+  3   2:Sites    92.9 +  321.1 =  414.0	Diffs     2.7 +   10.3 =   13.0
+  4   1:Sites   111.0 +  396.0 =  507.0	Diffs    16.2 +   56.8 =   73.0
+  4   2:Sites    92.8 +  318.2 =  411.0	Diffs     1.7 +    7.3 =    9.0
+  4   3:Sites   108.7 +  404.3 =  513.0	Diffs     1.0 +    1.0 =    2.0
+
+       48 bytes for distance
+   102480 bytes for conP
+     7560 bytes for fhK
+  5000000 bytes for space
+
+TREE #  1
+(3, (4, (2, 1)));   MP score: -1
+This is a rooted tree, without clock.  Check.
+
+   153720 bytes for conP, adjusted
+
+initial w for M8:NSbetaw>1 reset.
+
+    0.006287    0.017360    0.046110    0.104148    0.000000    0.181298    2.000000    0.900000    0.587011    1.475943    2.882193
+
+ntime & nrate & np:     6     2    11
+
+Bounds (np=11):
+   0.000004   0.000004   0.000004   0.000004   0.000004   0.000004   0.000100   0.000010   0.005000   0.005000   1.000000
+  50.000000  50.000000  50.000000  50.000000  50.000000  50.000000 999.000000   0.999990  99.000000  99.000000 999.000000
+Qfactor_NS = 7.404209
+
+np =    11
+lnL0 = -1102.294670
+
+Iterating by ming2
+Initial: fx=  1102.294670
+x=  0.00629  0.01736  0.04611  0.10415  0.00000  0.18130  2.00000  0.90000  0.58701  1.47594  2.88219
+
+  1 h-m-p  0.0000 0.0001 756.9760 ++     1089.126659  m 0.0001    16 | 1/11
+  2 h-m-p  0.0000 0.0002 254.6661 +YYYYCYCCCC  1082.839758  9 0.0001    44 | 0/11
+  3 h-m-p  0.0000 0.0000 3440.2783 ++     1081.318734  m 0.0000    58 | 1/11
+  4 h-m-p  0.0001 0.0003  63.7760 ++     1080.341473  m 0.0003    72 | 1/11
+  5 h-m-p  0.0000 0.0000  22.6751 
+h-m-p:      1.08681891e-20      5.43409454e-20      2.26750560e+01  1080.341473
+..  | 1/11
+  6 h-m-p  0.0000 0.0248 774.6680 CYYC   1079.100243  3 0.0000   101 | 1/11
+  7 h-m-p  0.0001 0.0237 108.5735 ++YCYCCC  1071.643209  5 0.0017   125 | 1/11
+  8 h-m-p  0.0008 0.0042  45.7961 +YCCCC  1069.363535  4 0.0023   147 | 1/11
+  9 h-m-p  0.0034 0.0169  21.9947 +YCYC  1066.823198  3 0.0112   166 | 1/11
+ 10 h-m-p  0.0018 0.0092  32.7563 ++     1064.088717  m 0.0092   180 | 1/11
+ 11 h-m-p  0.0000 0.0000 139.7601 
+h-m-p:      4.96330530e-19      2.48165265e-18      1.39760145e+02  1064.088717
+..  | 1/11
+ 12 h-m-p  0.0000 0.0140  43.7236 +YYCC  1063.942060  3 0.0002   210 | 1/11
+ 13 h-m-p  0.0001 0.0014 143.4097 +YCCC  1062.807151  3 0.0004   230 | 1/11
+ 14 h-m-p  0.0023 0.0113  20.3674 +YCCC  1061.542889  3 0.0073   250 | 1/11
+ 15 h-m-p  0.0005 0.0025  31.8960 ++     1060.897371  m 0.0025   264 | 2/11
+ 16 h-m-p  0.0062 0.0677   9.9877 ++     1058.618494  m 0.0677   278 | 2/11
+ 17 h-m-p  0.0000 0.0000   8.6735 
+h-m-p:      1.31201803e-18      6.56009017e-18      8.67345899e+00  1058.618494
+..  | 2/11
+ 18 h-m-p  0.0000 0.0153  45.4856 YCCC   1058.570477  3 0.0001   308 | 2/11
+ 19 h-m-p  0.0001 0.0083  43.0013 ++CCCC  1057.904217  3 0.0011   330 | 2/11
+ 20 h-m-p  0.0026 0.0142  17.9048 CCCC   1057.375801  3 0.0043   350 | 2/11
+ 21 h-m-p  0.0075 0.2925  10.1710 YCCC   1057.257668  3 0.0034   369 | 2/11
+ 22 h-m-p  0.0049 0.0796   7.0141 +CCCCC  1056.669387  4 0.0349   392 | 2/11
+ 23 h-m-p  0.0180 0.1519  13.5501 +YYYCC  1054.848149  4 0.0648   412 | 2/11
+ 24 h-m-p  0.1794 0.9569   4.8966 +CYC   1051.053744  2 0.7382   430 | 2/11
+ 25 h-m-p  0.4519 2.2596   1.2089 +YCCC  1049.694455  3 1.1735   450 | 2/11
+ 26 h-m-p  1.0405 8.0000   1.3635 +CCC   1047.794423  2 3.7636   469 | 2/11
+ 27 h-m-p  0.4405 2.2026   1.2193 ++     1047.288792  m 2.2026   483 | 2/11
+ 28 h-m-p  1.4440 8.0000   1.8598 +YCCC  1046.866154  3 3.5874   503 | 2/11
+ 29 h-m-p  0.4000 2.0002   1.1782 +YC    1046.768417  1 1.7531   519 | 2/11
+ 30 h-m-p  1.6000 8.0000   0.7541 YCCC   1046.722031  3 2.6610   538 | 2/11
+ 31 h-m-p  1.2688 6.3438   0.0982 CCC    1046.713001  2 1.6098   565 | 2/11
+ 32 h-m-p  0.4775 8.0000   0.3311 +CC    1046.711307  1 1.7258   591 | 2/11
+ 33 h-m-p  1.6000 8.0000   0.0525 C      1046.711242  0 1.3911   614 | 2/11
+ 34 h-m-p  1.6000 8.0000   0.0164 C      1046.711225  0 2.0423   637 | 2/11
+ 35 h-m-p  1.6000 8.0000   0.0020 C      1046.711224  0 1.7434   660 | 1/11
+ 36 h-m-p  0.9636 8.0000   0.0037 ++     1046.649418  m 8.0000   683 | 1/11
+ 37 h-m-p  0.1999 0.9993   0.0288 ---------------..  | 1/11
+ 38 h-m-p  0.0002 0.0913   5.2566 YC     1046.644521  1 0.0004   745 | 1/11
+ 39 h-m-p  0.0000 0.0049  54.0049 ++CYC  1046.554128  2 0.0007   764 | 1/11
+ 40 h-m-p  0.0008 0.0242  45.6508 +YCYCCC  1045.550611  5 0.0070   787 | 1/11
+ 41 h-m-p  0.0426 0.2962   7.4966 YCCC   1045.196700  3 0.0252   806 | 1/11
+ 42 h-m-p  0.0103 0.0516   6.8051 YCCC   1044.952256  3 0.0234   825 | 1/11
+ 43 h-m-p  0.0086 0.0430   4.9440 ++     1044.432795  m 0.0430   839 | 2/11
+ 44 h-m-p  0.3653 2.4885   0.4615 CCC    1043.949327  2 0.3343   857 | 1/11
+ 45 h-m-p  0.0602 1.8596   2.5627 YCCC   1043.870684  3 0.0358   885 | 1/11
+ 46 h-m-p  0.0132 0.0658   1.2834 ++     1043.694362  m 0.0658   899 | 2/11
+ 47 h-m-p  0.0058 0.2872  12.4105 YCC    1043.656691  2 0.0037   916 | 2/11
+ 48 h-m-p  0.1448 8.0000   0.3178 +YC    1043.518686  1 0.9857   932 | 2/11
+ 49 h-m-p  1.1037 8.0000   0.2838 +YCCC  1043.403575  3 3.2758   961 | 2/11
+ 50 h-m-p  1.4127 8.0000   0.6581 ++     1042.770873  m 8.0000   984 | 2/11
+ 51 h-m-p  1.3519 8.0000   3.8946 +CYCCC  1041.818999  4 4.3479  1015 | 2/11
+ 52 h-m-p  1.1969 5.9846   6.3836 YCCC   1040.652735  3 2.8455  1034 | 2/11
+ 53 h-m-p  1.6000 8.0000   7.5054 +YCCCC  1039.522747  4 4.0227  1056 | 2/11
+ 54 h-m-p  1.6000 8.0000   7.2311 +YCCC  1038.151076  3 4.9734  1076 | 2/11
+ 55 h-m-p  1.6000 8.0000  13.4292 YYC    1037.848755  2 1.3439  1092 | 2/11
+ 56 h-m-p  1.4811 8.0000  12.1852 YCCC   1037.682883  3 2.4468  1111 | 2/11
+ 57 h-m-p  1.2575 6.2877  17.7711 +YCCC  1037.458782  3 3.3632  1131 | 2/11
+ 58 h-m-p  1.6000 8.0000  22.9054 CYC    1037.363748  2 1.8020  1148 | 2/11
+ 59 h-m-p  1.6000 8.0000  17.7291 YCC    1037.317119  2 2.8942  1165 | 2/11
+ 60 h-m-p  1.6000 8.0000   9.5361 YC     1037.285526  1 3.3528  1180 | 2/11
+ 61 h-m-p  1.6000 8.0000   4.7770 CC     1037.272483  1 2.1758  1196 | 2/11
+ 62 h-m-p  1.6000 8.0000   2.4256 +YC    1037.259764  1 5.0094  1212 | 2/11
+ 63 h-m-p  0.6958 8.0000  17.4636 +YCC   1037.250009  2 2.0857  1230 | 2/11
+ 64 h-m-p  1.6000 8.0000   1.8492 +CC    1037.236902  1 5.4929  1247 | 2/11
+ 65 h-m-p  1.1039 8.0000   9.2014 +CC    1037.204142  1 4.6189  1264 | 2/11
+ 66 h-m-p  1.6000 8.0000  10.5979 CCC    1037.187916  2 2.1770  1282 | 2/11
+ 67 h-m-p  1.6000 8.0000   5.4594 CCC    1037.180453  2 1.8780  1300 | 2/11
+ 68 h-m-p  1.1937 8.0000   8.5891 CC     1037.178222  1 0.9147  1316 | 2/11
+ 69 h-m-p  1.6000 8.0000   2.4950 Y      1037.178086  0 1.2675  1330 | 2/11
+ 70 h-m-p  1.6000 8.0000   0.6485 C      1037.178079  0 1.2864  1344 | 2/11
+ 71 h-m-p  1.6000 8.0000   0.0756 Y      1037.178078  0 3.4955  1367 | 2/11
+ 72 h-m-p  1.6000 8.0000   0.0047 ++     1037.178066  m 8.0000  1390 | 2/11
+ 73 h-m-p  0.1552 1.4026   0.2441 ++     1037.177741  m 1.4026  1413 | 3/11
+ 74 h-m-p  0.0867 0.9828   3.9491 -Y     1037.177729  0 0.0035  1437 | 3/11
+ 75 h-m-p  0.0315 8.0000   0.4327 ++C    1037.177512  0 0.5040  1453 | 3/11
+ 76 h-m-p  0.1663 8.0000   1.3116 +++    1037.154296  m 8.0000  1476 | 3/11
+ 77 h-m-p  0.0022 0.0109 497.4361 Y      1037.154204  0 0.0004  1490 | 3/11
+ 78 h-m-p  0.0377 8.0000   5.1836 --------------..  | 3/11
+ 79 h-m-p  0.0000 0.0106   1.0994 +Y     1037.154162  0 0.0001  1531 | 3/11
+ 80 h-m-p  0.0021 1.0674   0.3222 CC     1037.154017  1 0.0030  1547 | 3/11
+ 81 h-m-p  0.0009 0.3755   1.1095 ++YC   1037.150032  1 0.0273  1572 | 3/11
+ 82 h-m-p  0.7890 8.0000   0.0384 ++     1037.142923  m 8.0000  1586 | 2/11
+ 83 h-m-p  0.0130 0.0650   7.6796 ---C   1037.142912  0 0.0001  1611 | 2/11
+ 84 h-m-p  0.0010 0.5223   0.9762 +++CYC  1037.139876  2 0.1352  1631 | 2/11
+ 85 h-m-p  0.1864 0.9322   0.5087 +CCC   1037.116554  2 0.7633  1659 | 2/11
+ 86 h-m-p  0.0123 0.0614   1.6145 CYYYYC  1037.114331  5 0.0309  1688 | 2/11
+ 87 h-m-p  0.0203 0.1016   0.5121 YCYC   1037.112408  3 0.0147  1707 | 2/11
+ 88 h-m-p  0.1130 8.0000   0.0668 ++CC   1037.108493  1 1.6576  1734 | 2/11
+ 89 h-m-p  1.6000 8.0000   0.0481 -YY    1037.108381  1 0.1197  1759 | 2/11
+ 90 h-m-p  0.1187 8.0000   0.0485 +C     1037.107974  0 0.4404  1783 | 2/11
+ 91 h-m-p  1.5231 8.0000   0.0140 YC     1037.107654  1 2.6791  1807 | 2/11
+ 92 h-m-p  1.3338 8.0000   0.0282 +C     1037.106742  0 5.5497  1831 | 2/11
+ 93 h-m-p  1.6000 8.0000   0.0227 CC     1037.106658  1 0.6452  1856 | 2/11
+ 94 h-m-p  0.6465 8.0000   0.0226 C      1037.106643  0 0.9564  1879 | 2/11
+ 95 h-m-p  1.6000 8.0000   0.0006 C      1037.106642  0 1.4580  1902 | 2/11
+ 96 h-m-p  1.6000 8.0000   0.0002 ++     1037.106640  m 8.0000  1925 | 2/11
+ 97 h-m-p  1.0016 8.0000   0.0014 ++     1037.106627  m 8.0000  1948 | 2/11
+ 98 h-m-p  1.3269 8.0000   0.0085 Y      1037.106620  0 0.6262  1971 | 2/11
+ 99 h-m-p  1.6000 8.0000   0.0021 C      1037.106618  0 1.6000  1994 | 2/11
+100 h-m-p  1.6000 8.0000   0.0015 Y      1037.106617  0 1.1732  2017 | 2/11
+101 h-m-p  1.6000 8.0000   0.0007 C      1037.106617  0 1.6000  2040 | 2/11
+102 h-m-p  1.6000 8.0000   0.0004 Y      1037.106617  0 0.7497  2063 | 2/11
+103 h-m-p  1.6000 8.0000   0.0001 Y      1037.106617  0 3.5321  2086 | 2/11
+104 h-m-p  1.4385 8.0000   0.0003 -Y     1037.106617  0 0.0493  2110 | 2/11
+105 h-m-p  0.0582 8.0000   0.0002 Y      1037.106617  0 0.1288  2133 | 2/11
+106 h-m-p  0.1473 8.0000   0.0002 C      1037.106617  0 0.0337  2156 | 2/11
+107 h-m-p  0.0385 8.0000   0.0002 +C     1037.106617  0 0.2115  2180 | 2/11
+108 h-m-p  0.2249 8.0000   0.0002 ---C   1037.106617  0 0.0009  2206
+Out..
+lnL  = -1037.106617
+2207 lfun, 22070 eigenQcodon, 119178 P(t)
+
+BEBing (dim = 4).  This may take several minutes.
+Calculating f(x_h|w): 10 categories 20 w sets.
+S10 w log{f(x|w)}:    0.0500     -6.383052
+S10 w log{f(x|w)}:    0.1500     -6.399356
+S10 w log{f(x|w)}:    0.2500     -6.415444
+S10 w log{f(x|w)}:    0.3500     -6.431316
+S10 w log{f(x|w)}:    0.4500     -6.446972
+S10 w log{f(x|w)}:    0.5500     -6.462411
+S10 w log{f(x|w)}:    0.6500     -6.477635
+S10 w log{f(x|w)}:    0.7500     -6.492644
+S10 w log{f(x|w)}:    0.8500     -6.507438
+S10 w log{f(x|w)}:    0.9500     -6.522017
+S10 w log{f(x|w)}:    1.5000     -6.598405
+S10 w log{f(x|w)}:    2.5000     -6.721253
+S10 w log{f(x|w)}:    3.5000     -6.824636
+S10 w log{f(x|w)}:    4.5000     -6.910432
+S10 w log{f(x|w)}:    5.5000     -6.980796
+S10 w log{f(x|w)}:    6.5000     -7.037949
+S10 w log{f(x|w)}:    7.5000     -7.084012
+S10 w log{f(x|w)}:    8.5000     -7.120914
+S10 w log{f(x|w)}:    9.5000     -7.150331
+S10 w log{f(x|w)}:   10.5000     -7.173684
+Calculating f(X), the marginal probability of data.
+	log(fX) = -1087.114104  S = -1003.246327   -77.929555
+Calculating f(w|X), posterior probabilities of site classes.
+	did  10 / 105 patterns   1:37	did  20 / 105 patterns   1:37	did  30 / 105 patterns   1:37	did  40 / 105 patterns   1:38	did  50 / 105 patterns   1:38	did  60 / 105 patterns   1:38	did  70 / 105 patterns   1:38	did  80 / 105 patterns   1:39	did  90 / 105 patterns   1:39	did 100 / 105 patterns   1:39	did 105 / 105 patterns   1:39
+Reconstructed ancestral states go into file rst.
+
+lnL = -1037.106617 from ProbSitePattern.
+Marginal reconstruction.
+	Node   5: lnL = -1037.106617
+	Node   6: lnL = -1037.106617
+	Node   7: lnL = -1037.106617
+
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ACT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GCG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CCT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ACT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GCG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CCT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GGT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AGG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GTG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AGA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GGA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CCA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CCC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GAA
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ATT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- ACT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- TTT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- GCG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CCT
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- CTC
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AAG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: --- AGG
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GGT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AGG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AGG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GTG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CTC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AGA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GGA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CCA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CCC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GAA ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: AAC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ATT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ACT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ACT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: ACT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: TTT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GCG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GCG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: GCG ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CCT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CCT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CCT ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CTC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CTC ---
+warning: strange character '-' 
+warning ambiguity in difcodonNG: CTC ---end of tree file.
+
+Time used:  1:40

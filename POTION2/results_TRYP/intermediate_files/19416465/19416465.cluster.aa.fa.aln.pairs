@@ -1,0 +1,16 @@
+
+#Mean Percentage of identity:                            0.955032
+#Mean Percentage of identity with most similar sequence: 0.974839
+
+#Percentage of identity matrix:
+A27  	0         	93.7901   	94.0043   	95.0749   	
+A28  	93.7901   	0         	99.7859   	95.0749   	
+A29  	94.0043   	99.7859   	0         	95.2891   	
+A30  	95.0749   	95.0749   	95.2891   	0         	
+
+#Percentage of identity with most similar sequence:
+A27  	95.0749		A30
+A28  	99.7859		A29
+A29  	99.7859		A28
+A30  	95.2891		A29
+

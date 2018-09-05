@@ -1,0 +1,1656 @@
+[2J[Hdnaml: can't find input file "infile"
+Please enter a new file name> 
+[2J[HNucleic acid sequence Maximum Likelihood method, version 3.697
+
+Settings for this run:
+  U                 Search for best tree?  Yes
+  T        Transition/transversion ratio:  2.0000
+  F       Use empirical base frequencies?  Yes
+  C                One category of sites?  Yes
+  R           Rate variation among sites?  constant rate
+  W                       Sites weighted?  No
+  S        Speedier but rougher analysis?  Yes
+  G                Global rearrangements?  No
+  J   Randomize input order of sequences?  No. Use input order
+  O                        Outgroup root?  No, use as outgroup species  1
+  M           Analyze multiple data sets?  No
+  I          Input sequences interleaved?  Yes
+  0   Terminal type (IBM PC, ANSI, none)?  ANSI
+  1    Print out the data at start of run  No
+  2  Print indications of progress of run  Yes
+  3                        Print out tree  Yes
+  4       Write out trees onto tree file?  Yes
+  5   Reconstruct hypothetical sequences?  No
+
+  Y to accept these or type the letter for one to change
+Multiple data sets or multiple weights? (type D or W)
+How many data sets?
+
+Random number seed (must be odd)?
+Number of times to jumble?
+[2J[HNucleic acid sequence Maximum Likelihood method, version 3.697
+
+Settings for this run:
+  U                 Search for best tree?  Yes
+  T        Transition/transversion ratio:  2.0000
+  F       Use empirical base frequencies?  Yes
+  C                One category of sites?  Yes
+  R           Rate variation among sites?  constant rate
+  W                       Sites weighted?  No
+  S        Speedier but rougher analysis?  Yes
+  G                Global rearrangements?  No
+  J   Randomize input order of sequences?  Yes (seed = 4177863,  1 times)
+  O                        Outgroup root?  No, use as outgroup species  1
+  M           Analyze multiple data sets?  Yes, 100 data sets
+  I          Input sequences interleaved?  Yes
+  0   Terminal type (IBM PC, ANSI, none)?  ANSI
+  1    Print out the data at start of run  No
+  2  Print indications of progress of run  Yes
+  3                        Print out tree  Yes
+  4       Write out trees onto tree file?  Yes
+  5   Reconstruct hypothetical sequences?  No
+
+  Y to accept these or type the letter for one to change
+
+Data set # 1:
+
+Adding species:
+   1. A61       
+   2. A60       
+   3. A58       
+   4. A62       
+   5. A64       
+   6. A57       
+   7. A59       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 2:
+
+Adding species:
+   1. A61       
+   2. A60       
+   3. A57       
+   4. A62       
+   5. A63       
+   6. A59       
+   7. A58       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 3:
+
+Adding species:
+   1. A64       
+   2. A60       
+   3. A63       
+   4. A57       
+   5. A62       
+   6. A58       
+   7. A59       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 4:
+
+Adding species:
+   1. A63       
+   2. A61       
+   3. A58       
+   4. A59       
+   5. A62       
+   6. A60       
+   7. A64       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 5:
+
+Adding species:
+   1. A60       
+   2. A62       
+   3. A64       
+   4. A57       
+   5. A63       
+   6. A58       
+   7. A59       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 6:
+
+Adding species:
+   1. A60       
+   2. A63       
+   3. A59       
+   4. A58       
+   5. A61       
+   6. A57       
+   7. A64       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 7:
+
+Adding species:
+   1. A58       
+   2. A57       
+   3. A62       
+   4. A61       
+   5. A64       
+   6. A63       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 8:
+
+Adding species:
+   1. A57       
+   2. A59       
+   3. A64       
+   4. A62       
+   5. A63       
+   6. A58       
+   7. A61       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 9:
+
+Adding species:
+   1. A64       
+   2. A62       
+   3. A58       
+   4. A57       
+   5. A63       
+   6. A61       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 10:
+
+Adding species:
+   1. A57       
+   2. A62       
+   3. A63       
+   4. A64       
+   5. A58       
+   6. A59       
+   7. A60       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 11:
+
+Adding species:
+   1. A57       
+   2. A61       
+   3. A60       
+   4. A59       
+   5. A58       
+   6. A63       
+   7. A64       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 12:
+
+Adding species:
+   1. A62       
+   2. A59       
+   3. A60       
+   4. A57       
+   5. A61       
+   6. A64       
+   7. A58       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 13:
+
+Adding species:
+   1. A59       
+   2. A61       
+   3. A57       
+   4. A58       
+   5. A63       
+   6. A62       
+   7. A64       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 14:
+
+Adding species:
+   1. A64       
+   2. A58       
+   3. A59       
+   4. A61       
+   5. A63       
+   6. A60       
+   7. A62       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 15:
+
+Adding species:
+   1. A62       
+   2. A63       
+   3. A60       
+   4. A59       
+   5. A57       
+   6. A58       
+   7. A64       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 16:
+
+Adding species:
+   1. A60       
+   2. A61       
+   3. A63       
+   4. A64       
+   5. A58       
+   6. A62       
+   7. A59       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 17:
+
+Adding species:
+   1. A58       
+   2. A62       
+   3. A57       
+   4. A60       
+   5. A59       
+   6. A63       
+   7. A61       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 18:
+
+Adding species:
+   1. A62       
+   2. A60       
+   3. A58       
+   4. A61       
+   5. A64       
+   6. A59       
+   7. A63       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 19:
+
+Adding species:
+   1. A57       
+   2. A58       
+   3. A63       
+   4. A64       
+   5. A59       
+   6. A60       
+   7. A62       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 20:
+
+Adding species:
+   1. A61       
+   2. A63       
+   3. A58       
+   4. A59       
+   5. A64       
+   6. A57       
+   7. A60       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 21:
+
+Adding species:
+   1. A63       
+   2. A58       
+   3. A64       
+   4. A62       
+   5. A61       
+   6. A60       
+   7. A57       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 22:
+
+Adding species:
+   1. A64       
+   2. A57       
+   3. A62       
+   4. A63       
+   5. A58       
+   6. A59       
+   7. A61       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 23:
+
+Adding species:
+   1. A59       
+   2. A58       
+   3. A57       
+   4. A63       
+   5. A64       
+   6. A61       
+   7. A62       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 24:
+
+Adding species:
+   1. A60       
+   2. A62       
+   3. A61       
+   4. A64       
+   5. A59       
+   6. A58       
+   7. A57       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 25:
+
+Adding species:
+   1. A57       
+   2. A64       
+   3. A63       
+   4. A61       
+   5. A58       
+   6. A62       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 26:
+
+Adding species:
+   1. A58       
+   2. A64       
+   3. A63       
+   4. A57       
+   5. A62       
+   6. A61       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 27:
+
+Adding species:
+   1. A57       
+   2. A62       
+   3. A63       
+   4. A61       
+   5. A60       
+   6. A64       
+   7. A58       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 28:
+
+Adding species:
+   1. A58       
+   2. A61       
+   3. A57       
+   4. A59       
+   5. A63       
+   6. A60       
+   7. A64       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 29:
+
+Adding species:
+   1. A63       
+   2. A62       
+   3. A64       
+   4. A60       
+   5. A59       
+   6. A58       
+   7. A57       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 30:
+
+Adding species:
+   1. A63       
+   2. A58       
+   3. A60       
+   4. A61       
+   5. A57       
+   6. A59       
+   7. A62       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 31:
+
+Adding species:
+   1. A57       
+   2. A60       
+   3. A61       
+   4. A63       
+   5. A62       
+   6. A58       
+   7. A64       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 32:
+
+Adding species:
+   1. A61       
+   2. A64       
+   3. A60       
+   4. A57       
+   5. A58       
+   6. A62       
+   7. A59       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 33:
+
+Adding species:
+   1. A63       
+   2. A60       
+   3. A61       
+   4. A59       
+   5. A62       
+   6. A64       
+   7. A57       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 34:
+
+Adding species:
+   1. A61       
+   2. A63       
+   3. A62       
+   4. A58       
+   5. A60       
+   6. A57       
+   7. A64       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 35:
+
+Adding species:
+   1. A58       
+   2. A64       
+   3. A61       
+   4. A57       
+   5. A62       
+   6. A60       
+   7. A63       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 36:
+
+Adding species:
+   1. A64       
+   2. A62       
+   3. A59       
+   4. A58       
+   5. A61       
+   6. A63       
+   7. A57       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 37:
+
+Adding species:
+   1. A62       
+   2. A57       
+   3. A63       
+   4. A59       
+   5. A61       
+   6. A58       
+   7. A60       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 38:
+
+Adding species:
+   1. A57       
+   2. A59       
+   3. A61       
+   4. A62       
+   5. A63       
+   6. A60       
+   7. A64       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 39:
+
+Adding species:
+   1. A61       
+   2. A60       
+   3. A62       
+   4. A57       
+   5. A59       
+   6. A64       
+   7. A58       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 40:
+
+Adding species:
+   1. A62       
+   2. A59       
+   3. A60       
+   4. A63       
+   5. A57       
+   6. A64       
+   7. A58       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 41:
+
+Adding species:
+   1. A64       
+   2. A63       
+   3. A62       
+   4. A61       
+   5. A58       
+   6. A60       
+   7. A59       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 42:
+
+Adding species:
+   1. A58       
+   2. A61       
+   3. A64       
+   4. A63       
+   5. A60       
+   6. A57       
+   7. A62       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 43:
+
+Adding species:
+   1. A62       
+   2. A60       
+   3. A63       
+   4. A61       
+   5. A64       
+   6. A59       
+   7. A57       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 44:
+
+Adding species:
+   1. A60       
+   2. A61       
+   3. A63       
+   4. A59       
+   5. A57       
+   6. A64       
+   7. A62       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 45:
+
+Adding species:
+   1. A62       
+   2. A57       
+   3. A59       
+   4. A58       
+   5. A64       
+   6. A60       
+   7. A63       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 46:
+
+Adding species:
+   1. A57       
+   2. A64       
+   3. A59       
+   4. A60       
+   5. A58       
+   6. A63       
+   7. A62       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 47:
+
+Adding species:
+   1. A63       
+   2. A62       
+   3. A64       
+   4. A60       
+   5. A59       
+   6. A57       
+   7. A58       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 48:
+
+Adding species:
+   1. A59       
+   2. A60       
+   3. A57       
+   4. A63       
+   5. A58       
+   6. A62       
+   7. A61       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 49:
+
+Adding species:
+   1. A62       
+   2. A63       
+   3. A64       
+   4. A59       
+   5. A60       
+   6. A57       
+   7. A61       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 50:
+
+Adding species:
+   1. A58       
+   2. A57       
+   3. A62       
+   4. A64       
+   5. A59       
+   6. A60       
+   7. A63       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 51:
+
+Adding species:
+   1. A61       
+   2. A64       
+   3. A59       
+   4. A57       
+   5. A62       
+   6. A63       
+   7. A58       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 52:
+
+Adding species:
+   1. A64       
+   2. A60       
+   3. A62       
+   4. A59       
+   5. A63       
+   6. A57       
+   7. A58       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 53:
+
+Adding species:
+   1. A62       
+   2. A59       
+   3. A61       
+   4. A60       
+   5. A64       
+   6. A63       
+   7. A57       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 54:
+
+Adding species:
+   1. A61       
+   2. A59       
+   3. A58       
+   4. A63       
+   5. A57       
+   6. A62       
+   7. A60       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 55:
+
+Adding species:
+   1. A63       
+   2. A61       
+   3. A60       
+   4. A57       
+   5. A58       
+   6. A64       
+   7. A59       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 56:
+
+Adding species:
+   1. A62       
+   2. A57       
+   3. A63       
+   4. A59       
+   5. A60       
+   6. A58       
+   7. A61       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 57:
+
+Adding species:
+   1. A58       
+   2. A64       
+   3. A59       
+   4. A62       
+   5. A63       
+   6. A61       
+   7. A57       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 58:
+
+Adding species:
+   1. A61       
+   2. A59       
+   3. A63       
+   4. A62       
+   5. A60       
+   6. A58       
+   7. A64       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 59:
+
+Adding species:
+   1. A57       
+   2. A59       
+   3. A63       
+   4. A58       
+   5. A62       
+   6. A61       
+   7. A60       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 60:
+
+Adding species:
+   1. A59       
+   2. A62       
+   3. A63       
+   4. A58       
+   5. A57       
+   6. A60       
+   7. A64       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 61:
+
+Adding species:
+   1. A57       
+   2. A62       
+   3. A58       
+   4. A64       
+   5. A60       
+   6. A61       
+   7. A63       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 62:
+
+Adding species:
+   1. A61       
+   2. A58       
+   3. A63       
+   4. A59       
+   5. A64       
+   6. A57       
+   7. A62       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 63:
+
+Adding species:
+   1. A64       
+   2. A58       
+   3. A62       
+   4. A63       
+   5. A57       
+   6. A61       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 64:
+
+Adding species:
+   1. A57       
+   2. A58       
+   3. A62       
+   4. A64       
+   5. A60       
+   6. A59       
+   7. A63       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 65:
+
+Adding species:
+   1. A59       
+   2. A62       
+   3. A61       
+   4. A60       
+   5. A57       
+   6. A64       
+   7. A58       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 66:
+
+Adding species:
+   1. A57       
+   2. A64       
+   3. A62       
+   4. A61       
+   5. A63       
+   6. A59       
+   7. A60       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 67:
+
+Adding species:
+   1. A64       
+   2. A63       
+   3. A60       
+   4. A62       
+   5. A57       
+   6. A61       
+   7. A59       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 68:
+
+Adding species:
+   1. A58       
+   2. A64       
+   3. A60       
+   4. A57       
+   5. A61       
+   6. A62       
+   7. A59       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 69:
+
+Adding species:
+   1. A63       
+   2. A64       
+   3. A62       
+   4. A59       
+   5. A58       
+   6. A60       
+   7. A61       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 70:
+
+Adding species:
+   1. A64       
+   2. A62       
+   3. A58       
+   4. A63       
+   5. A61       
+   6. A57       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 71:
+
+Adding species:
+   1. A63       
+   2. A62       
+   3. A64       
+   4. A60       
+   5. A61       
+   6. A58       
+   7. A57       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 72:
+
+Adding species:
+   1. A59       
+   2. A58       
+   3. A60       
+   4. A63       
+   5. A61       
+   6. A64       
+   7. A62       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 73:
+
+Adding species:
+   1. A60       
+   2. A58       
+   3. A63       
+   4. A64       
+   5. A62       
+   6. A57       
+   7. A61       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 74:
+
+Adding species:
+   1. A62       
+   2. A64       
+   3. A57       
+   4. A63       
+   5. A58       
+   6. A61       
+   7. A59       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 75:
+
+Adding species:
+   1. A62       
+   2. A58       
+   3. A57       
+   4. A61       
+   5. A64       
+   6. A63       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 76:
+
+Adding species:
+   1. A57       
+   2. A61       
+   3. A60       
+   4. A63       
+   5. A58       
+   6. A62       
+   7. A59       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 77:
+
+Adding species:
+   1. A57       
+   2. A58       
+   3. A60       
+   4. A64       
+   5. A59       
+   6. A61       
+   7. A62       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 78:
+
+Adding species:
+   1. A60       
+   2. A62       
+   3. A63       
+   4. A58       
+   5. A57       
+   6. A61       
+   7. A64       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 79:
+
+Adding species:
+   1. A62       
+   2. A59       
+   3. A61       
+   4. A63       
+   5. A58       
+   6. A64       
+   7. A60       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 80:
+
+Adding species:
+   1. A63       
+   2. A57       
+   3. A60       
+   4. A64       
+   5. A61       
+   6. A62       
+   7. A58       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 81:
+
+Adding species:
+   1. A60       
+   2. A62       
+   3. A59       
+   4. A64       
+   5. A57       
+   6. A61       
+   7. A58       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 82:
+
+Adding species:
+   1. A62       
+   2. A60       
+   3. A58       
+   4. A57       
+   5. A59       
+   6. A64       
+   7. A63       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 83:
+
+Adding species:
+   1. A61       
+   2. A63       
+   3. A60       
+   4. A57       
+   5. A58       
+   6. A64       
+   7. A59       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 84:
+
+Adding species:
+   1. A62       
+   2. A61       
+   3. A64       
+   4. A57       
+   5. A59       
+   6. A60       
+   7. A63       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 85:
+
+Adding species:
+   1. A59       
+   2. A60       
+   3. A61       
+   4. A64       
+   5. A58       
+   6. A63       
+   7. A62       
+   8. A57       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 86:
+
+Adding species:
+   1. A57       
+   2. A63       
+   3. A62       
+   4. A61       
+   5. A58       
+   6. A60       
+   7. A59       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 87:
+
+Adding species:
+   1. A62       
+   2. A59       
+   3. A64       
+   4. A60       
+   5. A57       
+   6. A61       
+   7. A58       
+   8. A63       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 88:
+
+Adding species:
+   1. A62       
+   2. A57       
+   3. A61       
+   4. A58       
+   5. A63       
+   6. A59       
+   7. A64       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 89:
+
+Adding species:
+   1. A60       
+   2. A57       
+   3. A59       
+   4. A64       
+   5. A58       
+   6. A61       
+   7. A63       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 90:
+
+Adding species:
+   1. A60       
+   2. A58       
+   3. A64       
+   4. A57       
+   5. A63       
+   6. A61       
+   7. A62       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 91:
+
+Adding species:
+   1. A62       
+   2. A64       
+   3. A61       
+   4. A63       
+   5. A57       
+   6. A58       
+   7. A60       
+   8. A59       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 92:
+
+Adding species:
+   1. A60       
+   2. A63       
+   3. A57       
+   4. A62       
+   5. A59       
+   6. A61       
+   7. A64       
+   8. A58       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 93:
+
+Adding species:
+   1. A58       
+   2. A63       
+   3. A57       
+   4. A64       
+   5. A59       
+   6. A60       
+   7. A62       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 94:
+
+Adding species:
+   1. A58       
+   2. A57       
+   3. A61       
+   4. A63       
+   5. A59       
+   6. A64       
+   7. A62       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 95:
+
+Adding species:
+   1. A64       
+   2. A58       
+   3. A57       
+   4. A63       
+   5. A61       
+   6. A59       
+   7. A62       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 96:
+
+Adding species:
+   1. A59       
+   2. A61       
+   3. A63       
+   4. A60       
+   5. A57       
+   6. A64       
+   7. A58       
+   8. A62       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 97:
+
+Adding species:
+   1. A62       
+   2. A60       
+   3. A64       
+   4. A58       
+   5. A57       
+   6. A63       
+   7. A59       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 98:
+
+Adding species:
+   1. A60       
+   2. A59       
+   3. A62       
+   4. A63       
+   5. A58       
+   6. A64       
+   7. A57       
+   8. A61       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 99:
+
+Adding species:
+   1. A63       
+   2. A58       
+   3. A57       
+   4. A59       
+   5. A64       
+   6. A62       
+   7. A61       
+   8. A60       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Data set # 100:
+
+Adding species:
+   1. A59       
+   2. A57       
+   3. A60       
+   4. A61       
+   5. A62       
+   6. A63       
+   7. A58       
+   8. A64       
+
+Output written to file "outfile"
+
+Tree also written onto file "outtree"
+
+Done.
+

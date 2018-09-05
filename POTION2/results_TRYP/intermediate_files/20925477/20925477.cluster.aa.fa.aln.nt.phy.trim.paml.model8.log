@@ -1,0 +1,196 @@
+
+ 15         verbose | verbose                1.00
+  7         runmode | runmode                0.00
+  4         seqtype | seqtype                1.00
+ 13       CodonFreq | CodonFreq              2.00
+  9           clock | clock                  0.00
+ 18          aaDist | aaDist                 0.00
+ 19      aaRatefile | aaRatefile             1.00
+ 16           model | model                  0.00
+ 20         NSsites | NSsites                8.00
+ 22           icode | icode                  0.00
+ 23           Mgene | Mgene                  0.00
+ 24       fix_kappa | fix_kappa              0.00
+ 25           kappa | kappa                  2.00
+ 26       fix_omega | fix_omega              0.00
+ 27           omega | omega                  0.40
+ 28       fix_alpha | fix_alpha              1.00
+ 29           alpha | alpha                  0.00
+ 30          Malpha | Malpha                 0.00
+ 31           ncatG | ncatG                  8.00
+ 11           getSE | getSE                  0.00
+ 12    RateAncestor | RateAncestor           1.00
+ 36      Small_Diff | Small_Diff             0.00
+  6       cleandata | cleandata              0.00
+  8          method | method                 0.00
+CODONML in paml version 4.8a, August 2014
+
+----------------------------------------------
+Phe F TTT | Ser S TCT | Tyr Y TAT | Cys C TGT
+      TTC |       TCC |       TAC |       TGC
+Leu L TTA |       TCA | *** * TAA | *** * TGA
+      TTG |       TCG |       TAG | Trp W TGG
+----------------------------------------------
+Leu L CTT | Pro P CCT | His H CAT | Arg R CGT
+      CTC |       CCC |       CAC |       CGC
+      CTA |       CCA | Gln Q CAA |       CGA
+      CTG |       CCG |       CAG |       CGG
+----------------------------------------------
+Ile I ATT | Thr T ACT | Asn N AAT | Ser S AGT
+      ATC |       ACC |       AAC |       AGC
+      ATA |       ACA | Lys K AAA | Arg R AGA
+Met M ATG |       ACG |       AAG |       AGG
+----------------------------------------------
+Val V GTT | Ala A GCT | Asp D GAT | Gly G GGT
+      GTC |       GCC |       GAC |       GGC
+      GTA |       GCA | Glu E GAA |       GGA
+      GTG |       GCG |       GAG |       GGG
+----------------------------------------------
+Nice code, uuh?
+
+
+Ambiguity character definition table:
+
+T (1): T 
+C (1): C 
+A (1): A 
+G (1): G 
+U (1): T 
+Y (2): T C 
+R (2): A G 
+M (2): C A 
+K (2): T G 
+S (2): C G 
+W (2): T A 
+H (3): T C A 
+B (3): T C G 
+V (3): C A G 
+D (3): T A G 
+- (4): T C A G 
+N (4): T C A G 
+? (4): T C A G 
+
+ns = 3  	ls = 606
+Reading sequences, interlaved format..
+Reading seq # 1: A103     Reading seq # 2: A104     Reading seq # 3: A105     
+block   1:     60     60     60
+block   2:    120    120    120
+block   3:    180    180    180
+block   4:    240    240    240
+block   5:    300    300    300
+block   6:    360    360    360
+block   7:    420    420    420
+block   8:    480    480    480
+block   9:    540    540    540
+block  10:    600    600    600
+block  11:    606    606    606
+Sequences read..
+Counting site patterns..  0:00
+          58 patterns at      202 /      202 sites (100.0%),  0:00
+Counting codons..
+
+  2   1:Sites   142.1 +  463.9 =  606.0	Diffs     0.0 +    1.0 =    1.0
+  3   1:Sites   142.1 +  463.9 =  606.0	Diffs     0.0 +    3.0 =    3.0
+  3   2:Sites   142.1 +  463.9 =  606.0	Diffs     0.0 +    2.0 =    2.0
+
+       24 bytes for distance
+    56608 bytes for conP
+     4176 bytes for fhK
+  5000000 bytes for space
+
+TREE #  1
+((3, 1), 2);   MP score: 3
+This is a rooted tree, without clock.  Check.
+
+initial w for M8:NSbetaw>1 reset.
+
+    0.000000    0.014883    0.045267    0.017997    2.000000    0.900000    1.102878    1.889840    2.387011
+
+ntime & nrate & np:     4     2     9
+
+Bounds (np=9):
+   0.000004   0.000004   0.000004   0.000004   0.000100   0.000010   0.005000   0.005000   1.000000
+  50.000000  50.000000  50.000000  50.000000 999.000000   0.999990  99.000000  99.000000 999.000000
+Qfactor_NS = 6.926725
+
+np =     9
+lnL0 =  -843.691992
+
+Iterating by ming2
+Initial: fx=   843.691992
+x=  0.00000  0.01488  0.04527  0.01800  2.00000  0.90000  1.10288  1.88984  2.38701
+
+  1 h-m-p  0.0000 0.0000 324.6129 ++      843.691552  m 0.0000    14 | 1/9
+  2 h-m-p  0.0000 0.0000 20383.3077 ++      837.503961  m 0.0000    26 | 2/9
+  3 h-m-p  0.0001 0.0005  63.5881 +YYYYYYCCCC   834.682064 10 0.0004    52 | 2/9
+  4 h-m-p  0.0113 0.4365   2.2201 ++CYC   834.348335  2 0.1487    69 | 2/9
+  5 h-m-p  0.0849 0.4244   1.1850 YCYCCC   833.793584  5 0.2213    89 | 2/9
+  6 h-m-p  0.1112 0.5562   0.7252 CYCCC   833.612609  4 0.1620   108 | 2/9
+  7 h-m-p  0.3425 5.2784   0.3431 +YCCCC   833.329723  4 2.7744   135 | 2/9
+  8 h-m-p  0.3686 1.8428   0.3884 +YCCC   833.235743  3 1.0433   160 | 2/9
+  9 h-m-p  0.3739 1.8694   0.2251 +CC     833.183644  1 1.4467   182 | 2/9
+ 10 h-m-p  0.0357 0.1783   0.3327 ++      833.172249  m 0.1783   201 | 3/9
+ 11 h-m-p  0.0714 8.0000   0.7558 ++YCCC   833.109726  3 1.8569   227 | 3/9
+ 12 h-m-p  1.6000 8.0000   0.4304 +CC     833.046490  1 6.2135   248 | 3/9
+ 13 h-m-p  1.6000 8.0000   1.1294 YCCC    833.010737  3 2.5665   271 | 3/9
+ 14 h-m-p  1.6000 8.0000   1.4706 +YC     832.980465  1 4.5296   285 | 3/9
+ 15 h-m-p  1.0349 5.1746   2.2890 +YC     832.965201  1 2.5940   299 | 3/9
+ 16 h-m-p  0.3426 1.7132   3.2503 ++      832.956058  m 1.7132   311 | 3/9
+ 17 h-m-p  0.0000 0.0000   9.0210 
+h-m-p:      1.52039604e-18      7.60198018e-18      9.02095401e+00   832.956058
+..  | 3/9
+ 18 h-m-p  0.0000 0.0031   2.3545 +Y      832.955964  0 0.0000   333 | 3/9
+ 19 h-m-p  0.0001 0.0132   0.8539 C       832.955952  0 0.0000   345 | 3/9
+ 20 h-m-p  0.0160 8.0000   0.0049 +++YC   832.955924  1 2.3467   367 | 3/9
+ 21 h-m-p  1.6000 8.0000   0.0011 ++      832.955915  m 8.0000   385 | 3/9
+ 22 h-m-p  0.0160 8.0000   0.7792 +++YC   832.955142  1 2.0085   407 | 3/9
+ 23 h-m-p  1.6000 8.0000   0.6958 ++      832.950376  m 8.0000   425 | 3/9
+ 24 h-m-p  0.4044 8.0000  13.7648 +YCCC   832.938772  3 3.5748   449 | 3/9
+ 25 h-m-p  1.6000 8.0000   8.6454 CC      832.935553  1 1.4707   463 | 3/9
+ 26 h-m-p  1.3123 8.0000   9.6889 ++      832.931970  m 8.0000   475 | 3/9
+ 27 h-m-p  1.6000 8.0000  32.0581 YC      832.930489  1 2.4904   488 | 3/9
+ 28 h-m-p  1.6000 8.0000  33.0667 YC      832.929337  1 3.6351   501 | 3/9
+ 29 h-m-p  1.6000 8.0000  55.9228 YC      832.928580  1 3.2820   514 | 3/9
+ 30 h-m-p  1.0921 5.4603  80.6690 +YC     832.928063  1 3.1534   528 | 3/9
+ 31 h-m-p  0.3094 1.5471 120.2878 ++      832.927806  m 1.5471   540 | 4/9
+ 32 h-m-p  1.6000 8.0000   0.0022 Y       832.927805  0 1.0232   552 | 4/9
+ 33 h-m-p  1.6000 8.0000   0.0000 C       832.927805  0 0.5683   569
+Out..
+lnL  =  -832.927805
+570 lfun, 5700 eigenQcodon, 20520 P(t)
+
+BEBing (dim = 4).  This may take several minutes.
+Calculating f(x_h|w): 10 categories 20 w sets.
+S10 w log{f(x|w)}:    0.0500     -4.058164
+S10 w log{f(x|w)}:    0.1500     -4.058166
+S10 w log{f(x|w)}:    0.2500     -4.058168
+S10 w log{f(x|w)}:    0.3500     -4.058170
+S10 w log{f(x|w)}:    0.4500     -4.058171
+S10 w log{f(x|w)}:    0.5500     -4.058173
+S10 w log{f(x|w)}:    0.6500     -4.058175
+S10 w log{f(x|w)}:    0.7500     -4.058177
+S10 w log{f(x|w)}:    0.8500     -4.058179
+S10 w log{f(x|w)}:    0.9500     -4.058180
+S10 w log{f(x|w)}:    1.5000     -4.058190
+S10 w log{f(x|w)}:    2.5000     -4.058209
+S10 w log{f(x|w)}:    3.5000     -4.058227
+S10 w log{f(x|w)}:    4.5000     -4.058245
+S10 w log{f(x|w)}:    5.5000     -4.058263
+S10 w log{f(x|w)}:    6.5000     -4.058281
+S10 w log{f(x|w)}:    7.5000     -4.058299
+S10 w log{f(x|w)}:    8.5000     -4.058318
+S10 w log{f(x|w)}:    9.5000     -4.058336
+S10 w log{f(x|w)}:   10.5000     -4.058354
+Calculating f(X), the marginal probability of data.
+	log(fX) =  -846.094056  S =  -843.591423    -0.169712
+Calculating f(w|X), posterior probabilities of site classes.
+	did  10 /  58 patterns   0:16	did  20 /  58 patterns   0:16	did  30 /  58 patterns   0:16	did  40 /  58 patterns   0:17	did  50 /  58 patterns   0:17	did  58 /  58 patterns   0:17
+Reconstructed ancestral states go into file rst.
+
+lnL =  -832.927805 from ProbSitePattern.
+Marginal reconstruction.
+	Node   4: lnL =  -832.927805
+	Node   5: lnL =  -832.927805
+end of tree file.
+
+Time used:  0:17

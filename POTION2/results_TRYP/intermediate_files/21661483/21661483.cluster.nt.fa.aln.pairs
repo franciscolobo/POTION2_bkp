@@ -1,0 +1,14 @@
+
+#Mean Percentage of identity:                            0.705784
+#Mean Percentage of identity with most similar sequence: 0.848655
+
+#Percentage of identity matrix:
+A133  	0         	56.5121   	56.181    	
+A132  	56.5121   	0         	99.0421   	
+A131  	56.181    	99.0421   	0         	
+
+#Percentage of identity with most similar sequence:
+A133  	56.5121		A132
+A132  	99.0421		A131
+A131  	99.0421		A132
+

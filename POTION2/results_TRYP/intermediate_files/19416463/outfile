@@ -1,0 +1,50 @@
+
+Consensus tree program, version 3.697
+
+Species in order: 
+
+  1. A24
+  2. A25
+  3. A22
+  4. A23
+  5. A26
+
+
+Sets included in the consensus tree
+
+Set (species in order)     How many times out of  100.00
+
+..**.                      99.00
+..***                      88.00
+
+
+Sets NOT included in consensus tree:
+
+Set (species in order)     How many times out of  100.00
+
+.*..*                      11.00
+.*.*.                       1.00
+.***.                       1.00
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of 100.00 trees
+
+                          +-------A22
+                  +--99.0-|
+          +--88.0-|       +-------A23
+          |       |
+  +-------|       +---------------A26
+  |       |
+  |       +-----------------------A25
+  |
+  +-------------------------------A24
+
+
+  remember: this is an unrooted tree!
+

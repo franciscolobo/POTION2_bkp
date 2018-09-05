@@ -1,0 +1,176 @@
+
+ 15         verbose | verbose                1.00
+  7         runmode | runmode                0.00
+  4         seqtype | seqtype                1.00
+ 13       CodonFreq | CodonFreq              2.00
+  9           clock | clock                  0.00
+ 18          aaDist | aaDist                 0.00
+ 19      aaRatefile | aaRatefile             1.00
+ 16           model | model                  0.00
+ 20         NSsites | NSsites                7.00
+ 22           icode | icode                  0.00
+ 23           Mgene | Mgene                  0.00
+ 24       fix_kappa | fix_kappa              0.00
+ 25           kappa | kappa                  2.00
+ 26       fix_omega | fix_omega              0.00
+ 27           omega | omega                  0.40
+ 28       fix_alpha | fix_alpha              1.00
+ 29           alpha | alpha                  0.00
+ 30          Malpha | Malpha                 0.00
+ 31           ncatG | ncatG                  8.00
+ 11           getSE | getSE                  0.00
+ 12    RateAncestor | RateAncestor           1.00
+ 36      Small_Diff | Small_Diff             0.00
+  6       cleandata | cleandata              0.00
+  8          method | method                 0.00
+CODONML in paml version 4.8a, August 2014
+
+----------------------------------------------
+Phe F TTT | Ser S TCT | Tyr Y TAT | Cys C TGT
+      TTC |       TCC |       TAC |       TGC
+Leu L TTA |       TCA | *** * TAA | *** * TGA
+      TTG |       TCG |       TAG | Trp W TGG
+----------------------------------------------
+Leu L CTT | Pro P CCT | His H CAT | Arg R CGT
+      CTC |       CCC |       CAC |       CGC
+      CTA |       CCA | Gln Q CAA |       CGA
+      CTG |       CCG |       CAG |       CGG
+----------------------------------------------
+Ile I ATT | Thr T ACT | Asn N AAT | Ser S AGT
+      ATC |       ACC |       AAC |       AGC
+      ATA |       ACA | Lys K AAA | Arg R AGA
+Met M ATG |       ACG |       AAG |       AGG
+----------------------------------------------
+Val V GTT | Ala A GCT | Asp D GAT | Gly G GGT
+      GTC |       GCC |       GAC |       GGC
+      GTA |       GCA | Glu E GAA |       GGA
+      GTG |       GCG |       GAG |       GGG
+----------------------------------------------
+Nice code, uuh?
+
+
+Ambiguity character definition table:
+
+T (1): T 
+C (1): C 
+A (1): A 
+G (1): G 
+U (1): T 
+Y (2): T C 
+R (2): A G 
+M (2): C A 
+K (2): T G 
+S (2): C G 
+W (2): T A 
+H (3): T C A 
+B (3): T C G 
+V (3): C A G 
+D (3): T A G 
+- (4): T C A G 
+N (4): T C A G 
+? (4): T C A G 
+
+ns = 4  	ls = 957
+Reading sequences, interlaved format..
+Reading seq # 1: A99     Reading seq # 2: A100     Reading seq # 3: A101     Reading seq # 4: A102     
+block   1:     60     60     60     60
+block   2:    120    120    120    120
+block   3:    180    180    180    180
+block   4:    240    240    240    240
+block   5:    300    300    300    300
+block   6:    360    360    360    360
+block   7:    420    420    420    420
+block   8:    480    480    480    480
+block   9:    540    540    540    540
+block  10:    600    600    600    600
+block  11:    660    660    660    660
+block  12:    720    720    720    720
+block  13:    780    780    780    780
+block  14:    840    840    840    840
+block  15:    900    900    900    900
+block  16:    957    957    957    957
+Sequences read..
+Counting site patterns..  0:00
+         155 patterns at      319 /      319 sites (100.0%),  0:00
+Counting codons..
+
+  2   1:Sites   216.3 +  740.7 =  957.0	Diffs    63.3 +   79.7 =  143.0
+  3   1:Sites   216.7 +  740.3 =  957.0	Diffs    60.3 +   77.7 =  138.0
+  3   2:Sites   216.5 +  740.5 =  957.0	Diffs     3.0 +    2.0 =    5.0
+  4   1:Sites   216.8 +  740.2 =  957.0	Diffs    62.3 +   79.7 =  142.0
+  4   2:Sites   216.6 +  740.4 =  957.0	Diffs     5.0 +    2.0 =    7.0
+  4   3:Sites   216.9 +  740.1 =  957.0	Diffs     2.0 +    2.0 =    4.0
+
+       48 bytes for distance
+   151280 bytes for conP
+     9920 bytes for fhK
+  5000000 bytes for space
+
+TREE #  1
+(3, ((4, 2), 1));   MP score: 106
+This is a rooted tree, without clock.  Check.
+
+   226920 bytes for conP, adjusted
+
+    0.000000    0.011073    0.039976    0.016778    0.049336    0.333847    2.000000    0.587011    1.475943
+
+ntime & nrate & np:     6     1     9
+
+Bounds (np=9):
+   0.000004   0.000004   0.000004   0.000004   0.000004   0.000004   0.000100   0.005000   0.005000
+  50.000000  50.000000  50.000000  50.000000  50.000000  50.000000 999.000000  99.000000  99.000000
+Qfactor_NS = 10.333617
+
+np =     9
+lnL0 = -1887.302065
+
+Iterating by ming2
+Initial: fx=  1887.302065
+x=  0.00000  0.01107  0.03998  0.01678  0.04934  0.33385  2.00000  0.58701  1.47594
+
+  1 h-m-p  0.0000 0.0000 596.1717 ++     1887.301133  m 0.0000    14 | 1/9
+  2 h-m-p  0.0000 0.0000 3420.8828 ++     1879.542956  m 0.0000    26 | 2/9
+  3 h-m-p  0.0000 0.0001 261.8072 +YYCYCYC  1875.158490  6 0.0001    48 | 2/9
+  4 h-m-p  0.0010 0.0050   8.8635 +YYYCCC  1871.157627  5 0.0035    68 | 2/9
+  5 h-m-p  0.0049 0.0247   5.4174 CCCCC  1870.772115  4 0.0066    88 | 2/9
+  6 h-m-p  0.0008 0.0174  44.1077 +CYCCCC  1866.883184  5 0.0066   110 | 2/9
+  7 h-m-p  0.0027 0.0133  30.9776 +YYCYCCC  1862.741766  6 0.0087   132 | 2/9
+  8 h-m-p  0.0442 0.2208   5.0437 +YYCYCCC  1857.344455  6 0.1447   154 | 2/9
+  9 h-m-p  0.1710 0.8548   0.9029 YCCC   1853.941109  3 0.4007   171 | 2/9
+ 10 h-m-p  0.1106 0.5528   2.3839 YCCCC  1853.112248  4 0.0621   197 | 2/9
+ 11 h-m-p  0.0609 0.3047   2.1019 +YYYYYCYCYC  1850.037486 10 0.2640   223 | 2/9
+ 12 h-m-p  0.0051 0.0256   3.3377 YYYY   1849.974016  3 0.0051   238 | 2/9
+ 13 h-m-p  0.0218 0.1428   0.7836 +YYCYYYYCYY  1849.081228 10 0.1255   262 | 2/9
+ 14 h-m-p  0.0305 8.0000   3.2292 +CYC   1848.411466  2 0.1419   285 | 2/9
+ 15 h-m-p  0.1774 0.8869   0.0985 +YYYYCC  1848.317364  5 0.6754   304 | 2/9
+ 16 h-m-p  1.0580 8.0000   0.0629 CCC    1848.269255  2 1.1191   327 | 2/9
+ 17 h-m-p  1.6000 8.0000   0.0114 C      1848.265586  0 1.6000   346 | 2/9
+ 18 h-m-p  1.6000 8.0000   0.0006 C      1848.265318  0 1.3579   365 | 2/9
+ 19 h-m-p  0.9269 8.0000   0.0009 Y      1848.265300  0 1.6950   384 | 2/9
+ 20 h-m-p  1.6000 8.0000   0.0002 ++     1848.265270  m 8.0000   403 | 2/9
+ 21 h-m-p  1.6000 8.0000   0.0010 Y      1848.265239  0 2.9027   422 | 2/9
+ 22 h-m-p  1.6000 8.0000   0.0006 C      1848.265233  0 1.9838   441 | 2/9
+ 23 h-m-p  1.6000 8.0000   0.0004 Y      1848.265230  0 2.9680   460 | 2/9
+ 24 h-m-p  1.6000 8.0000   0.0003 C      1848.265230  0 1.9027   479 | 2/9
+ 25 h-m-p  1.6000 8.0000   0.0003 Y      1848.265229  0 3.7799   498 | 2/9
+ 26 h-m-p  1.6000 8.0000   0.0001 C      1848.265229  0 1.6013   517 | 2/9
+ 27 h-m-p  0.9056 5.9140   0.0003 +C     1848.265229  0 3.1744   537 | 2/9
+ 28 h-m-p  0.5128 2.5639   0.0003 ++     1848.265229  m 2.5639   556 | 3/9
+ 29 h-m-p  0.5124 8.0000   0.0012 Y      1848.265229  0 0.0666   575 | 3/9
+ 30 h-m-p  1.6000 8.0000   0.0000 C      1848.265229  0 0.4668   593 | 3/9
+ 31 h-m-p  1.6000 8.0000   0.0000 --C    1848.265229  0 0.0376   613 | 3/9
+ 32 h-m-p  0.0487 8.0000   0.0000 -C     1848.265229  0 0.0030   632
+Out..
+lnL  = -1848.265229
+633 lfun, 5697 eigenQcodon, 30384 P(t)
+
+Reconstructed ancestral states go into file rst.
+
+lnL = -1848.265229 from ProbSitePattern.
+Marginal reconstruction.
+	Node   5: lnL = -1848.265229
+	Node   6: lnL = -1848.265229
+	Node   7: lnL = -1848.265229
+end of tree file.
+
+Time used:  0:25

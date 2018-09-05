@@ -1,0 +1,14 @@
+
+#Mean Percentage of identity:                            1
+#Mean Percentage of identity with most similar sequence: 1
+
+#Percentage of identity matrix:
+A54  	0         	100       	100       	
+A55  	100       	0         	100       	
+A56  	100       	100       	0         	
+
+#Percentage of identity with most similar sequence:
+A54  	100  		A55
+A55  	100  		A54
+A56  	100  		A54
+
