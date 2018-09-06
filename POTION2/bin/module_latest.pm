@@ -2286,15 +2286,25 @@ sub calculate_dn_ds {
 
   # Creating the DN/DS file
   if ($parameters->{mode} eq "branch") {
-    if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
-#  if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.final_tree"))||((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
-#      next if (($model eq "m1")||($model eq "m2")||($model eq "m7")||($model eq "m8"));
-      create_paml_config_files ($parameters, $potion_path, $seq_type, $ortholog_group, \$model);
-      run_paml ($parameters, $ortholog_group, \$model);
-    } elsif (!-e "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") {
-      die ("Problem with $$ortholog_group.cluster.aa.fa.aln.nt.phy.trim\n");
-    } else {
-      die ("Problem with $$ortholog_group.dummy_tree\n");
+    if($parameters->{infer_positive_selection} eq "codeml"){
+      if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
+  #  if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.cluster.aa.fa.aln.$$seq_type.phy.trim.final_tree"))||((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
+  #      next if (($model eq "m1")||($model eq "m2")||($model eq "m7")||($model eq "m8"));
+        create_paml_config_files ($parameters, $potion_path, $seq_type, $ortholog_group, \$model);
+        run_paml ($parameters, $ortholog_group, \$model);
+      } elsif (!-e "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") {
+        die ("Problem with $$ortholog_group.cluster.aa.fa.aln.nt.phy.trim\n");
+      } else {
+        die ("Problem with $$ortholog_group.dummy_tree\n");
+      }
+    }elsif($parameters->{infer_positive_selection} eq "fastcodeml"){
+      if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
+        run_fastcodeml ($parameters, $ortholog_group);
+      }elsif (!-e "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") {
+        die ("Problem with $$ortholog_group.cluster.aa.fa.aln.nt.phy.trim\n");
+      }else {
+        die ("Problem with $$ortholog_group.dummy_tree\n");
+      }
     }
   }
   elsif ($parameters->{mode} eq "site") {
