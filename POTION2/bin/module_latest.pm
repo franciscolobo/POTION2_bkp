@@ -60,6 +60,9 @@ sub help {
   print "--CDS_dir_path (string, optional)	- path to directory where multi-fasta CDS files are.
 					[Default: none. If provided, creates a configuration file with this parameter filled in]\n\n";
 
+  print "--tree_file_path (string, optional if branch model using fastcodeml)  - path to newick tree file whith marked branch.
+          [Default: none. If provided, creates a configuration file with this parameter filled in]\n\n";
+
   print "--homology_file_path (string, optional)	- path to the homology relationship file (OrthoMCL V1.4 format).
 					[Default: none. If provided, creates a configuration file with this parameter filled in]\n\n";
 
@@ -101,8 +104,9 @@ sub read_config_files { #read config files in the form element = value #comment
 
   # -=-=-= INPUT FILES =-=-=-
   $parameters{CDS_dir_path} = read_config_file_line('CDS_dir_path', $parameters{potion_dir}, $fh_user_config);
+  $parameters{tree_file_path} = read_config_file_line('tree_file_path', $parameters{potion_dir}, $fh_user_config);
   $parameters{homology_file_path} = read_config_file_line('homology_file_path', $parameters{potion_dir}, $fh_user_config);
-  $parameters{user_tree_file} = "";#must go to conf file
+  #$parameters{user_tree_file} = "";#must go to conf file
 
   # -=-=-= PROJECT NAME =-=-=-
   $parameters{project_dir_path} = read_config_file_line('project_dir_path', $parameters{potion_dir}, $fh_user_config);
@@ -162,6 +166,8 @@ sub read_config_files { #read config files in the form element = value #comment
 # -=-=-= MODULES =-=-=-
   $parameters{multiple_alignment} = read_config_file_line('multiple_alignment', '', $fh_user_config);
   $parameters{phylogenetic_tree} = read_config_file_line('phylogenetic_tree', '', $fh_user_config);
+
+  $parameters{infer_positive_selection} = read_config_file_line('infer_positive_selection', '', $fh_user_config);
 
   close($fh_user_config);
 
@@ -240,7 +246,7 @@ sub codon_table_name{
     '5' => 'THIMC',
     '6' => 'THCDHNC',
     '9' => 'THEFMC',
-    '10'=> 'THENC',
+    '10' => 'THENC',
     '11' => 'THBAPPC',
     '12' => 'THAYNC',
     '14' => 'THAFMC',
@@ -2298,6 +2304,7 @@ sub calculate_dn_ds {
         die ("Problem with $$ortholog_group.dummy_tree\n");
       }
     }elsif($parameters->{infer_positive_selection} eq "fastcodeml"){
+      parameters->{PAML_models} = "mH0H1"; #Model used for branch model in fastcodeml
       if (((-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") && (-s "$$ortholog_group.dummy_tree"))) {
         run_fastcodeml ($parameters, $ortholog_group);
       }elsif (!-e "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim") {
@@ -2411,17 +2418,21 @@ sub set_as_interleaved {
 
 
 sub run_fastcodeml {
-  my ($parameters, $ortholog_group, $model) = @_;
+  my ($parameters, $ortholog_group) = @_;
+  my @fastmodels = "H0,H1";
   my $rand = int(rand(100000000));
-
-  print ("Calculating linkelihood of model $$model for group $$ortholog_group\n");
-  print LOG ("$parameters->{fastcodeml_path} -hy $$model -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.dummy_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model.log");
   my $tries = 0;
   while($tries < $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model"){
     $tries++;
     try{
-      my $stderr = capture_stderr{ system ("$parameters->{fastcodeml_path} -hy $$model -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.dummy_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model.txt")};
+      foreach my $fastmodel (@fastmodels) {
         
+        print ("Calculating linkelihood of model $fastmodel for group $$ortholog_group\n");
+        print LOG ("$parameters->{fastcodeml_path} -hy $fastmodel -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.dummy_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$fastmodel.log");
+      
+        my $stderr = capture_stderr{ system ("$parameters->{fastcodeml_path} -hy $fastmodel -v 1 -s $rand -nt 1 -bf ./$$ortholog_group.dummy_tree ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim > ./$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$fastmodel.txt")};
+      }
+          
       }catch{
         if($tries >= $parameters->{tries} && !-s "$$ortholog_group.cluster.aa.fa.aln.nt.phy.trim.paml.model$$model" && defined $_) {
           print LOG_ERR ("Couldn't analyze the likelihood of model $$model for group $$ortholog_group.\nError: $_\n\n");
@@ -3624,8 +3635,8 @@ sub create_tree_files_branch_mode {
 
   #changing the species names in user-defined tree for temporary gene names
   #my $stderr = capture_stderr {system ("/projects/POTION_2/programs/newick-utils-1.6/src/nw_rename /projects/POTION_2/bin/user_defined_tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
-  my $stderr = capture_stderr {system ("$parameters->{nw_rename} /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
-  print LOG ("$parameters->{nw_rename} /home/francisco/primates/data/tree $$ortholog_group.id2genome > $$ortholog_group.dummy_tree\n");
+  my $stderr = capture_stderr {system ("$parameters->{nw_rename} $parameters->{$tree_file_path} $$ortholog_group.id2genome > $$ortholog_group.dummy_tree")};
+  print LOG ("$parameters->{nw_rename} $$parameters->{$tree_file_path} $$ortholog_group.id2genome > $$ortholog_group.dummy_tree\n");
   if ($stderr) {
     open (OUTERR,">>$$ortholog_group.group_status");
     print OUTERR "STOP\nError during creation of tree file using user-defined tree as topological guide\n$stderr\n";
